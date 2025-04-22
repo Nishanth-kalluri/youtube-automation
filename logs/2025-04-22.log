@@ -154,3 +154,192 @@ Error opening input files: Invalid data found when processing input
 2025-04-22 12:37:23,432 - services.youtube_uploader - INFO - Uploading video: News Update: oblivion remaster
 2025-04-22 12:37:23,432 - services.youtube_uploader - ERROR - Video file not found: 
 2025-04-22 14:40:39,648 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-22 15:26:20,694 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-22 15:26:26,239 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-22 15:26:26,240 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-22 15:26:34,619 - services.trends_scraper - INFO - Retrieved 419 trending topics
+2025-04-22 15:26:36,781 - services.trends_scraper - INFO - Selected best trending topic: barcelona - r.c.d. mallorca
+2025-04-22 15:26:36,782 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: barcelona - r.c.d. mallorca
+2025-04-22 15:26:36,784 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-22 15:26:45,189 - services.trends_scraper - INFO - Retrieved 419 trending topics
+2025-04-22 15:26:47,357 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: barcelona - r.c.d. mallorca
+2025-04-22 15:26:47,358 - services.news_scraper - INFO - Fetching news for topic: barcelona - r.c.d. mallorca
+2025-04-22 15:26:51,823 - services.news_scraper - INFO - Retrieved 0 news articles for topic: barcelona - r.c.d. mallorca
+2025-04-22 15:26:51,824 - services.news_scraper - WARNING - No articles found for topic: barcelona - r.c.d. mallorca
+2025-04-22 15:26:51,828 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-22 15:26:51,831 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-22 15:26:51,832 - services.script_generator - INFO - Generating script and image prompts
+2025-04-22 15:26:56,929 - services.script_generator - INFO - Generated script (2388 chars) and 6 image prompts
+2025-04-22 15:26:56,934 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-22 15:26:56,937 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-22 15:26:56,939 - services.tts_service - INFO - Generating audio from script (2388 chars)
+2025-04-22 15:26:56,939 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-22 15:26:59,176 - services.tts_service - INFO - Audio content written to output\audio\audio_1745350016.mp3
+2025-04-22 15:26:59,180 - orchestration.nodes.media_nodes - INFO - Generating images from 6 prompts
+2025-04-22 15:26:59,180 - services.image_generator - INFO - Generating 6 images
+2025-04-22 15:26:59,181 - services.image_generator - INFO - Downloading image 1/6: A dramatic wide-angle shot of ...
+2025-04-22 15:40:38,342 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-22 15:40:43,678 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-22 15:40:43,680 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-22 15:40:52,352 - services.trends_scraper - INFO - Retrieved 422 trending topics
+2025-04-22 15:40:54,556 - services.trends_scraper - INFO - Selected best trending topic: barcelona - r.c.d. mallorca
+2025-04-22 15:40:54,556 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: barcelona - r.c.d. mallorca
+2025-04-22 15:40:54,558 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-22 15:41:03,072 - services.trends_scraper - INFO - Retrieved 422 trending topics
+2025-04-22 15:41:05,239 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: barcelona - r.c.d. mallorca
+2025-04-22 15:41:05,240 - services.news_scraper - INFO - Fetching news for topic: barcelona - r.c.d. mallorca
+2025-04-22 15:41:09,698 - services.news_scraper - INFO - Retrieved 0 news articles for topic: barcelona - r.c.d. mallorca
+2025-04-22 15:41:09,699 - services.news_scraper - WARNING - No articles found for topic: barcelona - r.c.d. mallorca
+2025-04-22 15:41:09,702 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-22 15:41:09,703 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-22 15:41:09,703 - services.script_generator - INFO - Generating script and image prompts
+2025-04-22 15:41:14,280 - services.script_generator - INFO - Generated script (2441 chars) and 5 image prompts
+2025-04-22 15:41:14,291 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-22 15:41:14,294 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-22 15:41:14,294 - services.tts_service - INFO - Generating audio from script (2441 chars)
+2025-04-22 15:41:14,295 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-22 15:41:16,549 - services.tts_service - INFO - Audio content written to output\audio\audio_1745350874.mp3
+2025-04-22 15:41:16,556 - orchestration.nodes.media_nodes - INFO - Generating images from 5 prompts
+2025-04-22 15:41:16,556 - services.image_generator - INFO - Generating 5 images
+2025-04-22 15:41:16,556 - services.image_generator - INFO - Downloading image 1/5: A split-screen image of Barcel...
+2025-04-22 15:47:21,723 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-22 15:47:26,613 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-22 15:47:26,613 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-22 15:47:34,869 - services.trends_scraper - INFO - Retrieved 426 trending topics
+2025-04-22 15:47:37,058 - services.trends_scraper - INFO - Selected best trending topic: barcelona - r.c.d. mallorca
+2025-04-22 15:47:37,058 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: barcelona - r.c.d. mallorca
+2025-04-22 15:47:37,059 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-22 15:47:45,427 - services.trends_scraper - INFO - Retrieved 426 trending topics
+2025-04-22 15:47:47,578 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: barcelona - r.c.d. mallorca
+2025-04-22 15:47:47,578 - services.news_scraper - INFO - Fetching news for topic: barcelona - r.c.d. mallorca
+2025-04-22 15:47:52,040 - services.news_scraper - INFO - Retrieved 0 news articles for topic: barcelona - r.c.d. mallorca
+2025-04-22 15:47:52,041 - services.news_scraper - WARNING - No articles found for topic: barcelona - r.c.d. mallorca
+2025-04-22 15:47:52,043 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-22 15:47:52,045 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-22 15:47:52,045 - services.script_generator - INFO - Generating script and image prompts
+2025-04-22 15:47:56,825 - services.script_generator - INFO - Generated script (2023 chars) and 5 image prompts
+2025-04-22 15:47:56,830 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-22 15:47:56,833 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-22 15:47:56,834 - services.tts_service - INFO - Generating audio from script (1031 chars)
+2025-04-22 15:47:56,834 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-22 15:47:58,256 - services.tts_service - INFO - Audio content written to output\audio\audio_1745351276.mp3
+2025-04-22 15:47:58,258 - orchestration.nodes.media_nodes - INFO - Generating images from 5 prompts
+2025-04-22 15:47:58,258 - services.image_generator - INFO - Generating 5 images
+2025-04-22 15:47:58,258 - services.image_generator - INFO - Downloading image 1/5: A split-screen image of FC Bar...
+2025-04-22 15:48:02,724 - services.image_generator - INFO - Downloaded image to output\images\a_split_screen_image_of_fc_barcelona_and_r_c_d__ma_42.jpg
+2025-04-22 15:48:03,724 - services.image_generator - INFO - Downloading image 2/5: A panoramic view of a packed f...
+2025-04-22 15:48:09,756 - services.image_generator - INFO - Downloaded image to output\images\a_panoramic_view_of_a_packed_football_stadium_with_43.jpg
+2025-04-22 15:48:10,757 - services.image_generator - INFO - Downloading image 3/5: Two football players from oppo...
+2025-04-22 15:48:21,656 - services.image_generator - INFO - Downloaded image to output\images\two_football_players_from_opposing_teams_in_mid_ac_44.jpg
+2025-04-22 15:48:22,657 - services.image_generator - INFO - Downloading image 4/5: A close-up of a shiny La Liga ...
+2025-04-22 15:48:26,975 - services.image_generator - INFO - Downloaded image to output\images\a_close_up_of_a_shiny_la_liga_trophy_on_a_pedestal_45.jpg
+2025-04-22 15:48:27,977 - services.image_generator - INFO - Downloading image 5/5: A group of fans from both team...
+2025-04-22 15:48:33,792 - services.image_generator - INFO - Downloaded image to output\images\a_group_of_fans_from_both_teams_smiling_and_high_f_46.jpg
+2025-04-22 15:48:34,796 - orchestration.nodes.media_nodes - INFO - Checking if workflow should pause after media generation
+2025-04-22 15:48:34,797 - orchestration.nodes.video_nodes - INFO - Assembling video from audio and images
+2025-04-22 15:48:34,797 - services.video_editor - INFO - Creating video from 5 images and audio
+2025-04-22 15:48:35,002 - services.video_editor - INFO - Audio duration: 61.20s, Duration per image: 12.24s
+2025-04-22 15:48:39,309 - services.video_editor - INFO - Adding background music from assets/bg_music.mp3
+2025-04-22 15:48:39,385 - services.video_editor - ERROR - Error creating video: MoviePy error: failed to read the duration of file assets/bg_music.mp3.
+Here are the file infos returned by ffmpeg:
+
+ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[mp3 @ 0000028c52055000] Format mp3 detected only with low score of 1, misdetection possible!
+[mp3 @ 0000028c52055000] Failed to find two consecutive MPEG audio frames.
+[in#0 @ 0000028c52054c00] Error opening input: Invalid data found when processing input
+Error opening input file assets/bg_music.mp3.
+Error opening input files: Invalid data found when processing input
+
+2025-04-22 15:48:39,386 - orchestration.nodes.video_nodes - ERROR - Error in assemble_video: MoviePy error: failed to read the duration of file assets/bg_music.mp3.
+Here are the file infos returned by ffmpeg:
+
+ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[mp3 @ 0000028c52055000] Format mp3 detected only with low score of 1, misdetection possible!
+[mp3 @ 0000028c52055000] Failed to find two consecutive MPEG audio frames.
+[in#0 @ 0000028c52054c00] Error opening input: Invalid data found when processing input
+Error opening input file assets/bg_music.mp3.
+Error opening input files: Invalid data found when processing input
+
+2025-04-22 15:48:39,387 - orchestration.nodes.video_nodes - INFO - Checking if workflow should pause after video assembly
+2025-04-22 15:48:39,388 - orchestration.nodes.upload_nodes - INFO - Uploading video to YouTube
+2025-04-22 15:48:39,388 - services.youtube_uploader - INFO - Uploading video: News Update: barcelona - r.c.d. mallorca
+2025-04-22 15:48:39,388 - services.youtube_uploader - ERROR - Video file not found: 
+2025-04-22 16:28:17,388 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-22 16:28:21,892 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-22 16:28:21,894 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-22 16:28:33,408 - services.trends_scraper - INFO - Retrieved 432 trending topics
+2025-04-22 16:28:35,611 - services.trends_scraper - INFO - Selected best trending topic: barcelona - r.c.d. mallorca
+2025-04-22 16:28:35,611 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: barcelona - r.c.d. mallorca
+2025-04-22 16:28:35,613 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-22 16:28:44,004 - services.trends_scraper - INFO - Retrieved 432 trending topics
+2025-04-22 16:28:46,187 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: barcelona - r.c.d. mallorca
+2025-04-22 16:28:46,187 - services.news_scraper - INFO - Fetching news for topic: barcelona - r.c.d. mallorca
+2025-04-22 16:28:52,850 - services.news_scraper - INFO - Retrieved 0 news articles for topic: barcelona - r.c.d. mallorca
+2025-04-22 16:28:52,850 - services.news_scraper - WARNING - No articles found for topic: barcelona - r.c.d. mallorca
+2025-04-22 16:28:52,866 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-22 16:28:52,869 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-22 16:28:52,870 - services.script_generator - INFO - Generating script and image prompts
+2025-04-22 16:28:57,317 - services.script_generator - INFO - Generated script (2389 chars) and 6 image prompts
+2025-04-22 16:28:57,317 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-22 16:28:57,317 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-22 16:28:57,317 - services.tts_service - INFO - Generating audio from script (1577 chars)
+2025-04-22 16:28:57,330 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-22 16:28:59,973 - services.tts_service - INFO - Audio content written to output\audio\audio_1745353737.mp3
+2025-04-22 16:28:59,975 - orchestration.nodes.media_nodes - INFO - Generating images from 6 prompts
+2025-04-22 16:28:59,975 - services.image_generator - INFO - Generating 6 images
+2025-04-22 16:28:59,976 - services.image_generator - INFO - Downloading image 1/6: A split image of FC Barcelona ...
+2025-04-22 16:29:11,328 - services.image_generator - INFO - Downloaded image to output\images\a_split_image_of_fc_barcelona_and_r_c_d__mallorca_42.jpg
+2025-04-22 16:29:12,330 - services.image_generator - INFO - Downloading image 2/6: A montage of highlights from p...
+2025-04-22 16:29:14,845 - services.image_generator - INFO - Downloaded image to output\images\a_montage_of_highlights_from_past_matches_between_43.jpg
+2025-04-22 16:29:15,847 - services.image_generator - INFO - Downloading image 3/6: A graphic showing the current ...
+2025-04-22 16:29:18,053 - services.image_generator - INFO - Downloaded image to output\images\a_graphic_showing_the_current_standings_of_both_te_44.jpg
+2025-04-22 16:29:19,055 - services.image_generator - INFO - Downloading image 4/6: Footage of players from both t...
+2025-04-22 16:29:21,879 - services.image_generator - INFO - Downloaded image to output\images\footage_of_players_from_both_teams_training_and_pr_45.jpg
+2025-04-22 16:29:22,880 - services.image_generator - INFO - Downloading image 5/6: A shot of fans waving flags an...
+2025-04-22 16:29:26,426 - services.image_generator - INFO - Downloaded image to output\images\a_shot_of_fans_waving_flags_and_cheering_in_the_st_46.jpg
+2025-04-22 16:29:27,427 - services.image_generator - INFO - Downloading image 6/6: A closing shot of a soccer sta...
+2025-04-22 16:29:31,137 - services.image_generator - INFO - Downloaded image to output\images\a_closing_shot_of_a_soccer_stadium_at_sunset__with_47.jpg
+2025-04-22 16:29:32,142 - orchestration.nodes.media_nodes - INFO - Checking if workflow should pause after media generation
+2025-04-22 16:29:32,142 - orchestration.nodes.video_nodes - INFO - Assembling video from audio and images
+2025-04-22 16:29:32,144 - services.video_editor - INFO - Creating video from 6 images and audio
+2025-04-22 16:29:32,376 - services.video_editor - INFO - Audio duration: 88.66s, Duration per image: 14.78s
+2025-04-22 16:29:36,624 - services.video_editor - INFO - No background music added
+2025-04-22 16:29:36,624 - services.video_editor - INFO - Writing video to output\videos\video_1745353772.mp4
+2025-04-22 16:30:42,989 - services.video_editor - INFO - Video created successfully: output\videos\video_1745353772.mp4
+2025-04-22 16:30:42,990 - orchestration.nodes.video_nodes - INFO - Checking if workflow should pause after video assembly
+2025-04-22 16:30:42,992 - orchestration.nodes.upload_nodes - INFO - Uploading video to YouTube
+2025-04-22 16:30:42,992 - services.youtube_uploader - INFO - Uploading video: News Update: barcelona - r.c.d. mallorca
+2025-04-22 16:30:42,992 - services.youtube_uploader - INFO - Loading credentials from C:\Users\the_b\Downloads\youtube_token.pickle
+2025-04-22 16:30:42,993 - services.youtube_uploader - INFO - Getting new credentials...
+2025-04-22 16:30:57,663 - services.youtube_uploader - INFO - Saving credentials to C:\Users\the_b\Downloads\youtube_token.pickle
+2025-04-22 16:30:57,673 - services.youtube_uploader - INFO - Starting video upload to YouTube...
+2025-04-22 16:31:02,836 - services.youtube_uploader - INFO - Upload successful! Video ID: X2uEREd5m4M
+2025-04-22 16:31:02,837 - orchestration.nodes.upload_nodes - INFO - Cleaning up temporary files
+2025-04-22 16:31:02,838 - orchestration.nodes.upload_nodes - INFO - Deleted audio file: output\audio\audio_1745353737.mp3
+2025-04-22 16:31:02,839 - orchestration.nodes.upload_nodes - INFO - Deleted image file: output\images\a_split_image_of_fc_barcelona_and_r_c_d__mallorca_42.jpg
+2025-04-22 16:31:02,840 - orchestration.nodes.upload_nodes - INFO - Deleted image file: output\images\a_montage_of_highlights_from_past_matches_between_43.jpg
+2025-04-22 16:31:02,841 - orchestration.nodes.upload_nodes - INFO - Deleted image file: output\images\a_graphic_showing_the_current_standings_of_both_te_44.jpg
+2025-04-22 16:31:02,841 - orchestration.nodes.upload_nodes - INFO - Deleted image file: output\images\footage_of_players_from_both_teams_training_and_pr_45.jpg
+2025-04-22 16:31:02,842 - orchestration.nodes.upload_nodes - INFO - Deleted image file: output\images\a_shot_of_fans_waving_flags_and_cheering_in_the_st_46.jpg
+2025-04-22 16:31:02,843 - orchestration.nodes.upload_nodes - INFO - Deleted image file: output\images\a_closing_shot_of_a_soccer_stadium_at_sunset__with_47.jpg
+2025-04-22 16:31:02,845 - orchestration.nodes.upload_nodes - INFO - Deleted video file: output\videos\video_1745353772.mp4

@@ -20,11 +20,33 @@ def generate_script_and_prompts(state):
         print(script)
         print("IMAGE PROMPTS:")
         print(image_prompts)
+        
+        # Extract narration lines and combine into one continuous string
+        narration_text = ""
+        for line in script.split('\n'):
+            if line.startswith('Narrator: "'):
+                # Extract the content between quotes
+                extracted_text = line.split('Narrator: "', 1)[1].rsplit('"', 1)[0]
+                narration_text += extracted_text + " "  # Add space between segments
+        
+        # Remove trailing space and store as a single string
+        narration_text = narration_text.strip()
+        print("NARRATION TEXT:")
+        print(narration_text)
         # Update state
         state_dict["script"] = script
         state_dict["image_prompts"] = image_prompts
+        state_dict["narration"] = narration_text  # Store as a single string
         state_dict["status_message"] = "Script and image prompts generated successfully"
         
+        return state_dict
+        
+    except Exception as e:
+        logger.error(f"Error in generate_script_and_prompts: {e}")
+        state_dict = state.dict()
+        state_dict["error"] = f"Failed to generate script: {str(e)}"
+        state_dict["has_error"] = True
+        state_dict["status_message"] = "Error generating script"
         return state_dict
         
     except Exception as e:

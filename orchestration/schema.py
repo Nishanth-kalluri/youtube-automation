@@ -13,7 +13,7 @@ class WorkflowState(BaseModel):
     
     # Generated content
     script: str = ""
-    narrator: str=""
+    narration: str=""
     image_prompts: List[str] = []
     audio_path: str = ""
     image_paths: List[str] = []
