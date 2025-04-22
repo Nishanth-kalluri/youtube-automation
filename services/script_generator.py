@@ -20,10 +20,10 @@ class ScriptGenerator:
         Please generate:
         
         1. A video script with clear sections for intro, 3-5 key points, and outro. The script should be engaging, 
-           clear, and timed for a 0.5-1 minute youtube shorts video.
+           clear, and timed for a 30 to 45 seconds youtube shorts video.
         
         2. A list of 8-12 image prompts that would visually represent the story. These will be used to generate 
-           images using Pollinations.ai. Each prompt should be detailed and descriptive enough to generate a 
+           ultra realisitic and 9:16 images using Pollinations.ai for youtube shorts. Each prompt should be highly detailed and descriptive to generate a 
            compelling 4k image that complements the script.
 
         IMPORTANT FORMATTING INSTRUCTIONS:
