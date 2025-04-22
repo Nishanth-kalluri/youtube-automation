@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+.log
 # Streamlit specific cache and logs
 .streamlit/config.toml
 .streamlit/secrets.toml
@@ -76,3 +76,8 @@ Desktop.ini
 *.xls
 *.pkl
 *.pyc
+
+# Python bytecode cache files
+__pycache__/
+*.py[cod]
+*$py.class
