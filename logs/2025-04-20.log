@@ -1,0 +1,1130 @@
+2025-04-20 14:01:52,343 - services.tts_service - ERROR - Service account key file not found at '/path/to/google-cloud-service-account.json'
+2025-04-20 14:22:30,468 - services.tts_service - ERROR - Service account key file not found at '/path/to/google-cloud-service-account.json'
+2025-04-20 14:57:40,015 - services.tts_service - ERROR - Service account key file not found at '/path/to/google-cloud-service-account.json'
+2025-04-20 16:46:57,850 - services.tts_service - ERROR - Service account key file not found at '/path/to/google-cloud-service-account.json'
+2025-04-20 16:48:12,398 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 16:48:43,144 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 16:48:43,145 - services.trends_scraper - INFO - Scraping trending topics for region: US
+2025-04-20 16:48:49,710 - services.trends_scraper - INFO - Waiting for trending topics to load...
+2025-04-20 16:49:19,785 - services.trends_scraper - ERROR - Error scraping trending topics: Message: 
+
+2025-04-20 16:49:22,017 - services.trends_scraper - ERROR - No trending topics found
+2025-04-20 16:49:22,017 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: breaking news
+2025-04-20 16:49:22,020 - services.trends_scraper - INFO - Scraping trending topics for region: US
+2025-04-20 16:49:24,922 - services.trends_scraper - INFO - Waiting for trending topics to load...
+2025-04-20 16:49:55,402 - services.trends_scraper - ERROR - Error scraping trending topics: Message: 
+
+2025-04-20 16:49:57,659 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: breaking news
+2025-04-20 16:49:57,659 - services.news_scraper - INFO - Fetching news for topic: breaking news
+2025-04-20 16:49:58,135 - services.news_scraper - INFO - Retrieved 0 news articles for topic: breaking news
+2025-04-20 16:49:58,139 - services.news_scraper - WARNING - No articles found with exact topic match. Trying keyword search.
+2025-04-20 16:49:58,142 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 16:49:58,145 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 16:49:58,145 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 16:50:06,928 - services.script_generator - INFO - Generated script (4697 chars) and 7 image prompts
+2025-04-20 16:50:06,932 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-20 16:50:06,934 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-20 16:50:06,934 - services.tts_service - INFO - Generating audio from script (4697 chars)
+2025-04-20 16:50:06,934 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-20 16:50:11,999 - services.tts_service - INFO - Audio content written to output\audio\audio_1745182206.mp3
+2025-04-20 16:50:12,002 - orchestration.nodes.media_nodes - INFO - Generating images from 7 prompts
+2025-04-20 16:50:12,003 - services.image_generator - INFO - Generating 7 images
+2025-04-20 16:50:12,004 - services.image_generator - INFO - Downloading image 1/7: **...
+2025-04-20 16:50:18,127 - services.image_generator - INFO - Downloaded image to output\images\___42.jpg
+2025-04-20 16:50:19,129 - services.image_generator - INFO - Downloading image 2/7: A bustling newsroom with journ...
+2025-04-20 16:50:21,161 - services.image_generator - INFO - Downloaded image to output\images\a_bustling_newsroom_with_journalists_working__a_ne_43.jpg
+2025-04-20 16:50:22,164 - services.image_generator - INFO - Downloading image 3/7: A split screen showing a calm ...
+2025-04-20 16:50:24,534 - services.image_generator - INFO - Downloaded image to output\images\a_split_screen_showing_a_calm_cityscape_and_a_pers_44.jpg
+2025-04-20 16:50:25,536 - services.image_generator - INFO - Downloading image 4/7: A person at a desk with newspa...
+2025-04-20 16:50:30,086 - services.image_generator - INFO - Downloaded image to output\images\a_person_at_a_desk_with_newspapers_and_a_laptop__c_45.jpg
+2025-04-20 16:50:31,087 - services.image_generator - INFO - Downloading image 5/7: A journalist conducting an int...
+2025-04-20 16:50:33,583 - services.image_generator - INFO - Downloaded image to output\images\a_journalist_conducting_an_interview__symbolizing_46.jpg
+2025-04-20 16:50:34,584 - services.image_generator - INFO - Downloading image 6/7: A community gathering with peo...
+2025-04-20 16:50:38,095 - services.image_generator - INFO - Downloaded image to output\images\a_community_gathering_with_people_discussing_topic_47.jpg
+2025-04-20 16:50:39,095 - services.image_generator - INFO - Downloading image 7/7: A person confidently holding a...
+2025-04-20 16:50:49,793 - services.image_generator - INFO - Downloaded image to output\images\a_person_confidently_holding_a_tablet_with_a_news_48.jpg
+2025-04-20 16:50:50,799 - orchestration.nodes.media_nodes - INFO - Checking if workflow should pause after media generation
+2025-04-20 16:50:50,803 - orchestration.nodes.video_nodes - INFO - Assembling video from audio and images
+2025-04-20 16:50:50,803 - services.video_editor - INFO - Creating video from 7 images and audio
+2025-04-20 16:50:51,007 - services.video_editor - INFO - Audio duration: 299.93s, Duration per image: 42.85s
+2025-04-20 16:50:55,319 - services.video_editor - INFO - Adding background music from assets/bg_music.mp3
+2025-04-20 16:50:55,441 - services.video_editor - ERROR - Error creating video: MoviePy error: failed to read the duration of file assets/bg_music.mp3.
+Here are the file infos returned by ffmpeg:
+
+ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[mp3 @ 000001b8fe955000] Format mp3 detected only with low score of 1, misdetection possible!
+[mp3 @ 000001b8fe955000] Failed to find two consecutive MPEG audio frames.
+[in#0 @ 000001b8fe954c00] Error opening input: Invalid data found when processing input
+Error opening input file assets/bg_music.mp3.
+Error opening input files: Invalid data found when processing input
+
+2025-04-20 16:50:55,441 - orchestration.nodes.video_nodes - ERROR - Error in assemble_video: MoviePy error: failed to read the duration of file assets/bg_music.mp3.
+Here are the file infos returned by ffmpeg:
+
+ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[mp3 @ 000001b8fe955000] Format mp3 detected only with low score of 1, misdetection possible!
+[mp3 @ 000001b8fe955000] Failed to find two consecutive MPEG audio frames.
+[in#0 @ 000001b8fe954c00] Error opening input: Invalid data found when processing input
+Error opening input file assets/bg_music.mp3.
+Error opening input files: Invalid data found when processing input
+
+2025-04-20 16:50:55,443 - orchestration.nodes.video_nodes - INFO - Checking if workflow should pause after video assembly
+2025-04-20 16:50:55,483 - orchestration.nodes.upload_nodes - INFO - Uploading video to YouTube
+2025-04-20 16:50:55,483 - services.youtube_uploader - INFO - Uploading video: News Update: breaking news
+2025-04-20 16:50:55,484 - services.youtube_uploader - ERROR - Video file not found: 
+2025-04-20 16:54:09,307 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 16:54:13,630 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 16:54:13,632 - services.trends_scraper - INFO - Scraping trending topics for region: US
+2025-04-20 16:54:16,462 - services.trends_scraper - INFO - Waiting for trending topics to load...
+2025-04-20 16:54:46,807 - services.trends_scraper - ERROR - Error scraping trending topics: Message: 
+
+2025-04-20 16:54:49,030 - services.trends_scraper - ERROR - No trending topics found
+2025-04-20 16:54:49,031 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: breaking news
+2025-04-20 16:54:49,031 - services.trends_scraper - INFO - Scraping trending topics for region: US
+2025-04-20 16:54:52,252 - services.trends_scraper - INFO - Waiting for trending topics to load...
+2025-04-20 16:55:22,543 - services.trends_scraper - ERROR - Error scraping trending topics: Message: 
+
+2025-04-20 16:55:28,845 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: breaking news
+2025-04-20 16:55:28,845 - services.news_scraper - INFO - Fetching news for topic: breaking news
+2025-04-20 16:55:29,336 - services.news_scraper - INFO - Retrieved 0 news articles for topic: breaking news
+2025-04-20 16:55:29,337 - services.news_scraper - WARNING - No articles found with exact topic match. Trying keyword search.
+2025-04-20 16:55:29,337 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 16:55:29,339 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 16:55:29,339 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 16:55:34,251 - services.script_generator - INFO - Generated script (4607 chars) and 7 image prompts
+2025-04-20 16:55:34,252 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-20 16:55:34,253 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-20 16:55:34,253 - services.tts_service - INFO - Generating audio from script (4607 chars)
+2025-04-20 16:55:34,253 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-20 16:55:38,043 - services.tts_service - INFO - Audio content written to output\audio\audio_1745182534.mp3
+2025-04-20 16:55:38,045 - orchestration.nodes.media_nodes - INFO - Generating images from 7 prompts
+2025-04-20 16:55:38,046 - services.image_generator - INFO - Generating 7 images
+2025-04-20 16:55:38,046 - services.image_generator - INFO - Downloading image 1/7: **...
+2025-04-20 16:55:39,174 - services.image_generator - INFO - Downloaded image to output\images\___42.jpg
+2025-04-20 16:55:40,176 - services.image_generator - INFO - Downloading image 2/7: A serene park with people picn...
+2025-04-20 16:55:52,390 - services.image_generator - INFO - Downloaded image to output\images\a_serene_park_with_people_picnicking_and_children_43.jpg
+2025-04-20 16:55:53,392 - services.image_generator - INFO - Downloading image 3/7: A close-up of a ticking clock,...
+2025-04-20 16:55:58,322 - services.image_generator - INFO - Downloaded image to output\images\a_close_up_of_a_ticking_clock__transitioning_to_a_44.jpg
+2025-04-20 16:55:59,323 - services.image_generator - INFO - Downloading image 4/7: A quiet, modern newsroom with ...
+2025-04-20 16:56:07,863 - services.image_generator - INFO - Downloaded image to output\images\a_quiet__modern_newsroom_with_a_clean_desk__soft_l_45.jpg
+2025-04-20 16:56:08,864 - services.image_generator - INFO - Downloading image 5/7: A person comfortably reading a...
+2025-04-20 16:56:19,159 - services.image_generator - INFO - Downloaded image to output\images\a_person_comfortably_reading_a_book_in_a_cozy_livi_46.jpg
+2025-04-20 16:56:20,161 - services.image_generator - INFO - Downloading image 6/7: A person meditating in a peace...
+2025-04-20 16:56:23,151 - services.image_generator - INFO - Downloaded image to output\images\a_person_meditating_in_a_peaceful_garden_with_bird_47.jpg
+2025-04-20 16:56:24,152 - services.image_generator - INFO - Downloading image 7/7: This video script and image pr...
+2025-04-20 16:56:28,413 - services.image_generator - INFO - Downloaded image to output\images\this_video_script_and_image_prompts_work_together_48.jpg
+2025-04-20 16:56:29,417 - orchestration.nodes.media_nodes - INFO - Checking if workflow should pause after media generation
+2025-04-20 16:56:29,421 - orchestration.nodes.video_nodes - INFO - Assembling video from audio and images
+2025-04-20 16:56:29,421 - services.video_editor - INFO - Creating video from 7 images and audio
+2025-04-20 16:56:29,557 - services.video_editor - INFO - Audio duration: 296.52s, Duration per image: 42.36s
+2025-04-20 16:56:29,717 - services.video_editor - INFO - Adding background music from assets/bg_music.mp3
+2025-04-20 16:56:29,956 - services.video_editor - ERROR - Error creating video: MoviePy error: failed to read the duration of file assets/bg_music.mp3.
+Here are the file infos returned by ffmpeg:
+
+ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[mp3 @ 0000022fd2d95000] Format mp3 detected only with low score of 1, misdetection possible!
+[mp3 @ 0000022fd2d95000] Failed to find two consecutive MPEG audio frames.
+[in#0 @ 0000022fd2d94c00] Error opening input: Invalid data found when processing input
+Error opening input file assets/bg_music.mp3.
+Error opening input files: Invalid data found when processing input
+
+2025-04-20 16:56:29,957 - orchestration.nodes.video_nodes - ERROR - Error in assemble_video: MoviePy error: failed to read the duration of file assets/bg_music.mp3.
+Here are the file infos returned by ffmpeg:
+
+ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[mp3 @ 0000022fd2d95000] Format mp3 detected only with low score of 1, misdetection possible!
+[mp3 @ 0000022fd2d95000] Failed to find two consecutive MPEG audio frames.
+[in#0 @ 0000022fd2d94c00] Error opening input: Invalid data found when processing input
+Error opening input file assets/bg_music.mp3.
+Error opening input files: Invalid data found when processing input
+
+2025-04-20 16:56:29,958 - orchestration.nodes.video_nodes - INFO - Checking if workflow should pause after video assembly
+2025-04-20 16:56:29,959 - orchestration.nodes.upload_nodes - INFO - Uploading video to YouTube
+2025-04-20 16:56:29,959 - services.youtube_uploader - INFO - Uploading video: News Update: breaking news
+2025-04-20 16:56:29,959 - services.youtube_uploader - ERROR - Video file not found: 
+2025-04-20 16:59:42,747 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 16:59:48,844 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 16:59:48,846 - services.trends_scraper - INFO - Scraping trending topics for region: US
+2025-04-20 16:59:48,847 - services.trends_scraper - WARNING - Failed to initialize Chrome with service: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2025-04-20 16:59:51,632 - services.trends_scraper - INFO - Waiting for trending topics to load...
+2025-04-20 17:00:21,908 - services.trends_scraper - ERROR - Error scraping trending topics (attempt 1/3): Message: 
+
+2025-04-20 17:00:22,016 - services.trends_scraper - INFO - Retrying in 10 seconds...
+2025-04-20 17:00:34,245 - services.trends_scraper - WARNING - Failed to initialize Chrome with service: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2025-04-20 17:00:37,828 - services.trends_scraper - INFO - Waiting for trending topics to load...
+2025-04-20 17:04:19,291 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 17:04:23,070 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 17:18:05,530 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 17:18:15,510 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 17:18:15,511 - services.trends_scraper - INFO - Scraping trending topics for region: US
+2025-04-20 17:18:18,613 - services.trends_scraper - INFO - Waiting for trending topics to load...
+2025-04-20 17:18:49,003 - services.trends_scraper - ERROR - Error scraping trending topics (attempt 1/3): Message: 
+
+2025-04-20 17:18:49,210 - services.trends_scraper - INFO - Retrying in 10 seconds...
+2025-04-20 17:43:05,515 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 17:43:20,858 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 17:43:20,868 - services.trends_scraper - INFO - Scraping trending topics for region: US
+2025-04-20 17:43:23,479 - services.trends_scraper - INFO - Looking for Export button...
+2025-04-20 17:43:23,508 - services.trends_scraper - INFO - Clicking Export button...
+2025-04-20 17:43:25,667 - services.trends_scraper - INFO - Trying selector: //li[@data-action='clipboard']
+2025-04-20 17:43:25,692 - services.trends_scraper - INFO - Found 2 elements with selector //li[@data-action='clipboard']
+2025-04-20 17:43:25,710 - services.trends_scraper - INFO - Element 1 is displayed, clicking it...
+2025-04-20 17:43:28,781 - services.trends_scraper - INFO - Successfully retrieved trending topics from clipboard
+2025-04-20 17:43:28,782 - services.trends_scraper - INFO - Retrieved 215 trending topics
+2025-04-20 17:43:30,959 - services.trends_scraper - INFO - Selected trending topic: from selenium import webdriver
+2025-04-20 17:43:30,960 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: from selenium import webdriver
+2025-04-20 17:43:30,962 - services.trends_scraper - INFO - Using existing trending topics file (215 topics)
+2025-04-20 17:43:30,963 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: from selenium import webdriver
+2025-04-20 17:43:30,963 - services.news_scraper - INFO - Fetching news for topic: from selenium import webdriver
+2025-04-20 17:43:31,554 - services.news_scraper - INFO - Retrieved 0 news articles for topic: from selenium import webdriver
+2025-04-20 17:43:31,557 - services.news_scraper - WARNING - No articles found with exact topic match. Trying keyword search.
+2025-04-20 17:43:31,559 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 17:43:31,560 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 17:43:31,561 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 17:43:37,105 - services.script_generator - INFO - Generated script (5574 chars) and 6 image prompts
+2025-04-20 17:43:37,107 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-20 17:43:37,110 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-20 17:43:37,110 - services.tts_service - INFO - Generating audio from script (5574 chars)
+2025-04-20 17:43:37,111 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-20 17:43:37,493 - services.tts_service - ERROR - Error generating audio: 400 Either `input.text` or `input.ssml` is longer than the limit of 5000 bytes. This limit is different from quotas. To fix, reduce the byte length of the characters in this request, or consider using the Long Audio API: https://cloud.google.com/text-to-speech/docs/create-audio-text-long-audio-synthesis.
+2025-04-20 17:43:37,493 - orchestration.nodes.media_nodes - ERROR - Error in generate_audio: 400 Either `input.text` or `input.ssml` is longer than the limit of 5000 bytes. This limit is different from quotas. To fix, reduce the byte length of the characters in this request, or consider using the Long Audio API: https://cloud.google.com/text-to-speech/docs/create-audio-text-long-audio-synthesis.
+2025-04-20 17:43:37,496 - orchestration.nodes.media_nodes - INFO - Generating images from 6 prompts
+2025-04-20 17:43:37,496 - services.image_generator - INFO - Generating 6 images
+2025-04-20 17:43:37,497 - services.image_generator - INFO - Downloading image 1/6: A futuristic tech interface wi...
+2025-04-20 17:43:42,157 - services.image_generator - INFO - Downloaded image to output\images\a_futuristic_tech_interface_with_glowing_blue_code_42.jpg
+2025-04-20 17:43:43,158 - services.image_generator - INFO - Downloading image 2/6: A close-up of a developer's ha...
+2025-04-20 17:43:52,835 - services.image_generator - INFO - Downloaded image to output\images\a_close_up_of_a_developer_s_hands_typing_code_in_a_43.jpg
+2025-04-20 17:43:53,835 - services.image_generator - INFO - Downloading image 3/6: A split-screen dashboard showi...
+2025-04-20 17:43:58,077 - services.image_generator - INFO - Downloaded image to output\images\a_split_screen_dashboard_showing_multiple_browsers_44.jpg
+2025-04-20 17:43:59,078 - services.image_generator - INFO - Downloading image 4/6: A team of diverse developers c...
+2025-04-20 17:48:53,126 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 17:48:56,592 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 17:48:56,594 - services.trends_scraper - INFO - Using existing trending topics file (215 topics)
+2025-04-20 17:48:56,596 - services.trends_scraper - INFO - Selected trending topic: from selenium.webdriver.chrome.service import Service
+2025-04-20 17:48:56,597 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: from selenium.webdriver.chrome.service import Service
+2025-04-20 17:48:56,598 - services.trends_scraper - INFO - Using existing trending topics file (215 topics)
+2025-04-20 17:48:56,601 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: from selenium.webdriver.chrome.service import Service
+2025-04-20 17:48:56,602 - services.news_scraper - INFO - Fetching news for topic: from selenium.webdriver.chrome.service import Service
+2025-04-20 17:48:57,208 - services.news_scraper - INFO - Retrieved 0 news articles for topic: from selenium.webdriver.chrome.service import Service
+2025-04-20 17:48:57,208 - services.news_scraper - WARNING - No articles found with exact topic match. Trying keyword search.
+2025-04-20 17:48:57,210 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 17:48:57,211 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 17:48:57,211 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 17:49:01,259 - services.script_generator - INFO - Generated script (3795 chars) and 7 image prompts
+2025-04-20 17:49:01,260 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-20 17:49:01,261 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-20 17:49:01,261 - services.tts_service - INFO - Generating audio from script (3795 chars)
+2025-04-20 17:49:01,262 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-20 17:52:11,077 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 17:52:17,512 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 17:52:17,514 - services.trends_scraper - INFO - Using existing trending topics file (215 topics)
+2025-04-20 17:52:17,515 - services.trends_scraper - INFO - Selected trending topic: from selenium.webdriver.common.by import By
+2025-04-20 17:52:17,518 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: from selenium.webdriver.common.by import By
+2025-04-20 17:52:17,519 - services.trends_scraper - INFO - Using existing trending topics file (215 topics)
+2025-04-20 17:52:17,528 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: from selenium.webdriver.common.by import By
+2025-04-20 17:52:17,529 - services.news_scraper - INFO - Fetching news for topic: from selenium.webdriver.common.by import By
+2025-04-20 17:52:18,045 - services.news_scraper - INFO - Retrieved 0 news articles for topic: from selenium.webdriver.common.by import By
+2025-04-20 17:52:18,046 - services.news_scraper - WARNING - No articles found with exact topic match. Trying keyword search.
+2025-04-20 17:52:18,050 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 17:52:18,053 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 17:52:18,056 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 17:52:23,359 - services.script_generator - INFO - Generated script (5411 chars) and 7 image prompts
+2025-04-20 17:52:23,360 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-20 17:52:23,366 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-20 17:52:23,367 - services.tts_service - INFO - Generating audio from script (5411 chars)
+2025-04-20 17:52:23,367 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-20 17:52:23,601 - services.tts_service - ERROR - Error generating audio: 400 Either `input.text` or `input.ssml` is longer than the limit of 5000 bytes. This limit is different from quotas. To fix, reduce the byte length of the characters in this request, or consider using the Long Audio API: https://cloud.google.com/text-to-speech/docs/create-audio-text-long-audio-synthesis.
+2025-04-20 17:52:23,602 - orchestration.nodes.media_nodes - ERROR - Error in generate_audio: 400 Either `input.text` or `input.ssml` is longer than the limit of 5000 bytes. This limit is different from quotas. To fix, reduce the byte length of the characters in this request, or consider using the Long Audio API: https://cloud.google.com/text-to-speech/docs/create-audio-text-long-audio-synthesis.
+2025-04-20 17:52:23,604 - orchestration.nodes.media_nodes - INFO - Generating images from 7 prompts
+2025-04-20 17:52:23,605 - services.image_generator - INFO - Generating 7 images
+2025-04-20 17:52:23,605 - services.image_generator - INFO - Downloading image 1/7: **...
+2025-04-20 17:52:24,397 - services.image_generator - INFO - Downloaded image to output\images\___42.jpg
+2025-04-20 18:08:22,251 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 18:08:26,067 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 18:08:26,068 - services.trends_scraper - INFO - Loaded 3 previously used topics
+2025-04-20 18:08:26,071 - services.trends_scraper - INFO - Using existing trending topics file (215 topics)
+2025-04-20 18:08:26,074 - services.trends_scraper - INFO - From file - Topic #1: from selenium import webdriver
+2025-04-20 18:08:26,099 - services.trends_scraper - INFO - From file - Topic #2: from selenium.webdriver.chrome.service import Service
+2025-04-20 18:08:26,100 - services.trends_scraper - INFO - From file - Topic #3: from selenium.webdriver.common.by import By
+2025-04-20 18:08:26,100 - services.trends_scraper - INFO - From file - Topic #4: from selenium.webdriver.support.ui import WebDriverWait
+2025-04-20 18:08:26,100 - services.trends_scraper - INFO - From file - Topic #5: from selenium.webdriver.support import expected_conditions as EC
+2025-04-20 18:08:26,101 - services.trends_scraper - INFO - From file - Topic #6: import time
+2025-04-20 18:08:26,102 - services.trends_scraper - INFO - From file - Topic #7: import pyperclip
+2025-04-20 18:08:26,102 - services.trends_scraper - INFO - From file - Topic #8: import os
+2025-04-20 18:08:26,103 - services.trends_scraper - INFO - From file - Topic #9: import json
+2025-04-20 18:08:26,104 - services.trends_scraper - INFO - From file - Topic #10: from datetime import datetime, timedelta
+2025-04-20 18:08:26,104 - services.trends_scraper - INFO - Returning 10 trending topics:
+2025-04-20 18:08:26,104 - services.trends_scraper - INFO - Final topic #1: from selenium import webdriver
+2025-04-20 18:08:26,106 - services.trends_scraper - INFO - Final topic #2: from selenium.webdriver.chrome.service import Service
+2025-04-20 18:08:26,107 - services.trends_scraper - INFO - Final topic #3: from selenium.webdriver.common.by import By
+2025-04-20 18:08:26,108 - services.trends_scraper - INFO - Final topic #4: from selenium.webdriver.support.ui import WebDriverWait
+2025-04-20 18:08:26,108 - services.trends_scraper - INFO - Final topic #5: from selenium.webdriver.support import expected_conditions as EC
+2025-04-20 18:08:26,108 - services.trends_scraper - INFO - Final topic #6: import time
+2025-04-20 18:08:26,110 - services.trends_scraper - INFO - Final topic #7: import pyperclip
+2025-04-20 18:08:26,111 - services.trends_scraper - INFO - Final topic #8: import os
+2025-04-20 18:08:26,111 - services.trends_scraper - INFO - Final topic #9: import json
+2025-04-20 18:08:26,113 - services.trends_scraper - INFO - Final topic #10: from datetime import datetime, timedelta
+2025-04-20 18:08:26,113 - services.trends_scraper - INFO - Considering these trending topics:
+2025-04-20 18:08:26,114 - services.trends_scraper - INFO - Topic #1: 'from selenium import webdriver' - Used in last 24h: True
+2025-04-20 18:08:26,114 - services.trends_scraper - INFO - Topic #2: 'from selenium.webdriver.chrome.service import Service' - Used in last 24h: True
+2025-04-20 18:08:26,114 - services.trends_scraper - INFO - Topic #3: 'from selenium.webdriver.common.by import By' - Used in last 24h: True
+2025-04-20 18:08:26,115 - services.trends_scraper - INFO - Topic #4: 'from selenium.webdriver.support.ui import WebDriverWait' - Used in last 24h: False
+2025-04-20 18:08:26,115 - services.trends_scraper - INFO - Topic #5: 'from selenium.webdriver.support import expected_conditions as EC' - Used in last 24h: False
+2025-04-20 18:08:26,115 - services.trends_scraper - INFO - Topic #6: 'import time' - Used in last 24h: False
+2025-04-20 18:08:26,116 - services.trends_scraper - INFO - Topic #7: 'import pyperclip' - Used in last 24h: False
+2025-04-20 18:08:26,116 - services.trends_scraper - INFO - Topic #8: 'import os' - Used in last 24h: False
+2025-04-20 18:08:26,120 - services.trends_scraper - INFO - Topic #9: 'import json' - Used in last 24h: False
+2025-04-20 18:08:26,120 - services.trends_scraper - INFO - Topic #10: 'from datetime import datetime, timedelta' - Used in last 24h: False
+2025-04-20 18:08:26,120 - services.trends_scraper - INFO - Selected unused trending topic: 'from selenium.webdriver.support.ui import WebDriverWait'
+2025-04-20 18:08:26,123 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: from selenium.webdriver.support.ui import WebDriverWait
+2025-04-20 18:08:26,124 - services.trends_scraper - INFO - Using existing trending topics file (215 topics)
+2025-04-20 18:08:26,125 - services.trends_scraper - INFO - From file - Topic #1: from selenium import webdriver
+2025-04-20 18:08:26,126 - services.trends_scraper - INFO - From file - Topic #2: from selenium.webdriver.chrome.service import Service
+2025-04-20 18:08:26,127 - services.trends_scraper - INFO - From file - Topic #3: from selenium.webdriver.common.by import By
+2025-04-20 18:08:26,128 - services.trends_scraper - INFO - From file - Topic #4: from selenium.webdriver.support.ui import WebDriverWait
+2025-04-20 18:08:26,128 - services.trends_scraper - INFO - From file - Topic #5: from selenium.webdriver.support import expected_conditions as EC
+2025-04-20 18:08:26,129 - services.trends_scraper - INFO - Returning 5 trending topics:
+2025-04-20 18:08:26,130 - services.trends_scraper - INFO - Final topic #1: from selenium import webdriver
+2025-04-20 18:08:26,130 - services.trends_scraper - INFO - Final topic #2: from selenium.webdriver.chrome.service import Service
+2025-04-20 18:08:26,130 - services.trends_scraper - INFO - Final topic #3: from selenium.webdriver.common.by import By
+2025-04-20 18:08:26,131 - services.trends_scraper - INFO - Final topic #4: from selenium.webdriver.support.ui import WebDriverWait
+2025-04-20 18:08:26,131 - services.trends_scraper - INFO - Final topic #5: from selenium.webdriver.support import expected_conditions as EC
+2025-04-20 18:08:26,136 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: from selenium.webdriver.support.ui import WebDriverWait
+2025-04-20 18:08:26,137 - services.news_scraper - INFO - Fetching news for topic: from selenium.webdriver.support.ui import WebDriverWait
+2025-04-20 18:08:26,794 - services.news_scraper - INFO - Retrieved 0 news articles for topic: from selenium.webdriver.support.ui import WebDriverWait
+2025-04-20 18:08:26,797 - services.news_scraper - WARNING - No articles found with exact topic match. Trying keyword search.
+2025-04-20 18:08:26,799 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 18:08:26,802 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 18:08:26,802 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 18:08:31,669 - services.script_generator - INFO - Generated script (4421 chars) and 6 image prompts
+2025-04-20 18:08:31,671 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-20 18:08:31,674 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-20 18:08:31,675 - services.tts_service - INFO - Generating audio from script (4421 chars)
+2025-04-20 18:08:31,676 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-20 18:16:49,495 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 18:17:10,412 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 18:17:12,749 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 18:17:12,751 - services.trends_scraper - INFO - Loaded 4 previously used topics
+2025-04-20 18:17:12,751 - services.trends_scraper - INFO - Using existing trending topics file (215 topics)
+2025-04-20 18:17:12,752 - services.trends_scraper - INFO - From file - Topic #1: from selenium import webdriver
+2025-04-20 18:17:12,752 - services.trends_scraper - INFO - From file - Topic #2: from selenium.webdriver.chrome.service import Service
+2025-04-20 18:17:12,752 - services.trends_scraper - INFO - From file - Topic #3: from selenium.webdriver.common.by import By
+2025-04-20 18:17:12,752 - services.trends_scraper - INFO - From file - Topic #4: from selenium.webdriver.support.ui import WebDriverWait
+2025-04-20 18:17:12,752 - services.trends_scraper - INFO - From file - Topic #5: from selenium.webdriver.support import expected_conditions as EC
+2025-04-20 18:17:12,753 - services.trends_scraper - INFO - From file - Topic #6: import time
+2025-04-20 18:17:12,753 - services.trends_scraper - INFO - From file - Topic #7: import pyperclip
+2025-04-20 18:17:12,753 - services.trends_scraper - INFO - From file - Topic #8: import os
+2025-04-20 18:17:12,753 - services.trends_scraper - INFO - From file - Topic #9: import json
+2025-04-20 18:17:12,753 - services.trends_scraper - INFO - From file - Topic #10: from datetime import datetime, timedelta
+2025-04-20 18:17:12,753 - services.trends_scraper - INFO - Returning 10 trending topics:
+2025-04-20 18:17:12,754 - services.trends_scraper - INFO - Final topic #1: from selenium import webdriver
+2025-04-20 18:17:12,754 - services.trends_scraper - INFO - Final topic #2: from selenium.webdriver.chrome.service import Service
+2025-04-20 18:17:12,754 - services.trends_scraper - INFO - Final topic #3: from selenium.webdriver.common.by import By
+2025-04-20 18:17:12,754 - services.trends_scraper - INFO - Final topic #4: from selenium.webdriver.support.ui import WebDriverWait
+2025-04-20 18:17:12,754 - services.trends_scraper - INFO - Final topic #5: from selenium.webdriver.support import expected_conditions as EC
+2025-04-20 18:17:12,754 - services.trends_scraper - INFO - Final topic #6: import time
+2025-04-20 18:17:12,754 - services.trends_scraper - INFO - Final topic #7: import pyperclip
+2025-04-20 18:17:12,754 - services.trends_scraper - INFO - Final topic #8: import os
+2025-04-20 18:17:12,754 - services.trends_scraper - INFO - Final topic #9: import json
+2025-04-20 18:17:12,754 - services.trends_scraper - INFO - Final topic #10: from datetime import datetime, timedelta
+2025-04-20 18:17:12,755 - services.trends_scraper - INFO - Considering these trending topics:
+2025-04-20 18:17:12,755 - services.trends_scraper - INFO - Topic #1: 'from selenium import webdriver' - Used in last 24h: True
+2025-04-20 18:17:12,755 - services.trends_scraper - INFO - Topic #2: 'from selenium.webdriver.chrome.service import Service' - Used in last 24h: True
+2025-04-20 18:17:12,755 - services.trends_scraper - INFO - Topic #3: 'from selenium.webdriver.common.by import By' - Used in last 24h: True
+2025-04-20 18:17:12,755 - services.trends_scraper - INFO - Topic #4: 'from selenium.webdriver.support.ui import WebDriverWait' - Used in last 24h: True
+2025-04-20 18:17:12,755 - services.trends_scraper - INFO - Topic #5: 'from selenium.webdriver.support import expected_conditions as EC' - Used in last 24h: False
+2025-04-20 18:17:12,755 - services.trends_scraper - INFO - Topic #6: 'import time' - Used in last 24h: False
+2025-04-20 18:17:12,755 - services.trends_scraper - INFO - Topic #7: 'import pyperclip' - Used in last 24h: False
+2025-04-20 18:17:12,756 - services.trends_scraper - INFO - Topic #8: 'import os' - Used in last 24h: False
+2025-04-20 18:17:12,756 - services.trends_scraper - INFO - Topic #9: 'import json' - Used in last 24h: False
+2025-04-20 18:17:12,756 - services.trends_scraper - INFO - Topic #10: 'from datetime import datetime, timedelta' - Used in last 24h: False
+2025-04-20 18:17:12,756 - services.trends_scraper - INFO - Selected unused trending topic: 'from selenium.webdriver.support import expected_conditions as EC'
+2025-04-20 18:17:12,757 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: from selenium.webdriver.support import expected_conditions as EC
+2025-04-20 18:17:12,759 - services.trends_scraper - INFO - Using existing trending topics file (215 topics)
+2025-04-20 18:17:12,759 - services.trends_scraper - INFO - From file - Topic #1: from selenium import webdriver
+2025-04-20 18:17:12,760 - services.trends_scraper - INFO - From file - Topic #2: from selenium.webdriver.chrome.service import Service
+2025-04-20 18:17:12,761 - services.trends_scraper - INFO - From file - Topic #3: from selenium.webdriver.common.by import By
+2025-04-20 18:17:12,761 - services.trends_scraper - INFO - From file - Topic #4: from selenium.webdriver.support.ui import WebDriverWait
+2025-04-20 18:17:12,761 - services.trends_scraper - INFO - From file - Topic #5: from selenium.webdriver.support import expected_conditions as EC
+2025-04-20 18:17:12,761 - services.trends_scraper - INFO - Returning 5 trending topics:
+2025-04-20 18:17:12,762 - services.trends_scraper - INFO - Final topic #1: from selenium import webdriver
+2025-04-20 18:17:12,762 - services.trends_scraper - INFO - Final topic #2: from selenium.webdriver.chrome.service import Service
+2025-04-20 18:17:12,762 - services.trends_scraper - INFO - Final topic #3: from selenium.webdriver.common.by import By
+2025-04-20 18:17:12,762 - services.trends_scraper - INFO - Final topic #4: from selenium.webdriver.support.ui import WebDriverWait
+2025-04-20 18:17:12,763 - services.trends_scraper - INFO - Final topic #5: from selenium.webdriver.support import expected_conditions as EC
+2025-04-20 18:17:12,764 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: from selenium.webdriver.support import expected_conditions as EC
+2025-04-20 18:17:12,765 - services.news_scraper - INFO - Fetching news for topic: from selenium.webdriver.support import expected_conditions as EC
+2025-04-20 18:17:13,410 - services.news_scraper - INFO - Retrieved 0 news articles for topic: from selenium.webdriver.support import expected_conditions as EC
+2025-04-20 18:17:13,411 - services.news_scraper - WARNING - No articles found with exact topic match. Trying keyword search.
+2025-04-20 18:17:13,412 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 18:17:13,414 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 18:17:13,414 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 18:40:08,669 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 18:40:12,310 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 18:40:12,312 - services.trends_scraper - INFO - Loaded 5 previously used topics
+2025-04-20 18:40:12,314 - services.trends_scraper - WARNING - Trending topics file appears to contain code instead of actual topics
+2025-04-20 18:40:12,314 - services.trends_scraper - INFO - Deleting invalid trending topics file
+2025-04-20 18:40:12,315 - services.trends_scraper - WARNING - Trending topics file contains invalid data
+2025-04-20 18:40:12,315 - services.trends_scraper - INFO - Scraping fresh trending topics
+2025-04-20 18:40:12,315 - services.trends_scraper - INFO - Scraping trending topics for region: US
+2025-04-20 18:40:14,967 - services.trends_scraper - INFO - Looking for Export button...
+2025-04-20 18:40:15,231 - services.trends_scraper - INFO - Clicking Export button...
+2025-04-20 18:40:17,281 - services.trends_scraper - INFO - Trying selector: //li[@data-action='clipboard']
+2025-04-20 18:40:17,305 - services.trends_scraper - INFO - Found 2 elements with selector //li[@data-action='clipboard']
+2025-04-20 18:40:17,332 - services.trends_scraper - INFO - Element 1 is displayed, clicking it...
+2025-04-20 18:40:20,460 - services.trends_scraper - INFO - Successfully retrieved trending topics from clipboard
+2025-04-20 18:40:20,461 - services.trends_scraper - INFO - Retrieved 185 valid trending topics
+2025-04-20 18:40:20,462 - services.trends_scraper - INFO - Trending topic #1: self.region = region
+2025-04-20 18:40:20,462 - services.trends_scraper - INFO - Trending topic #2: self.logger = Logger(__name__)
+2025-04-20 18:40:20,462 - services.trends_scraper - INFO - Trending topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:40:20,463 - services.trends_scraper - INFO - Trending topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:40:20,463 - services.trends_scraper - INFO - Trending topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:40:20,463 - services.trends_scraper - INFO - Trending topic #6: except Exception as e:
+2025-04-20 18:40:20,463 - services.trends_scraper - INFO - Trending topic #7: self.logger.error(f"Error loading used topics: {e}")
+2025-04-20 18:40:20,464 - services.trends_scraper - INFO - Trending topic #8: """Save a topic as used with current timestamp"""
+2025-04-20 18:40:20,464 - services.trends_scraper - INFO - Trending topic #9: used_topics = self._load_used_topics()
+2025-04-20 18:40:20,464 - services.trends_scraper - INFO - Trending topic #10: # Add current topic with timestamp
+2025-04-20 18:40:20,465 - services.trends_scraper - INFO - Trending topic #11: used_topics[topic] = datetime.now().isoformat()
+2025-04-20 18:40:20,466 - services.trends_scraper - INFO - Trending topic #12: # Remove topics older than 24 hours
+2025-04-20 18:40:20,466 - services.trends_scraper - INFO - Trending topic #13: current_time = datetime.now()
+2025-04-20 18:40:20,467 - services.trends_scraper - INFO - Trending topic #14: topics_to_keep = {}
+2025-04-20 18:40:20,467 - services.trends_scraper - INFO - Trending topic #15: timestamp_dt = datetime.fromisoformat(timestamp)
+2025-04-20 18:40:22,602 - services.trends_scraper - INFO - Returning 10 trending topics:
+2025-04-20 18:40:22,603 - services.trends_scraper - INFO - Final topic #1: self.region = region
+2025-04-20 18:40:22,603 - services.trends_scraper - INFO - Final topic #2: self.logger = Logger(__name__)
+2025-04-20 18:40:22,603 - services.trends_scraper - INFO - Final topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:40:22,604 - services.trends_scraper - INFO - Final topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:40:22,604 - services.trends_scraper - INFO - Final topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:40:22,604 - services.trends_scraper - INFO - Final topic #6: except Exception as e:
+2025-04-20 18:40:22,604 - services.trends_scraper - INFO - Final topic #7: self.logger.error(f"Error loading used topics: {e}")
+2025-04-20 18:40:22,604 - services.trends_scraper - INFO - Final topic #8: """Save a topic as used with current timestamp"""
+2025-04-20 18:40:22,605 - services.trends_scraper - INFO - Final topic #9: used_topics = self._load_used_topics()
+2025-04-20 18:40:22,605 - services.trends_scraper - INFO - Final topic #10: # Add current topic with timestamp
+2025-04-20 18:40:22,605 - services.trends_scraper - INFO - Considering these trending topics:
+2025-04-20 18:40:22,605 - services.trends_scraper - INFO - Topic #1: 'self.region = region' - Used in last 24h: False
+2025-04-20 18:40:22,605 - services.trends_scraper - INFO - Topic #2: 'self.logger = Logger(__name__)' - Used in last 24h: False
+2025-04-20 18:40:22,605 - services.trends_scraper - INFO - Topic #3: 'self.used_topics_file = "used_topics.json"' - Used in last 24h: False
+2025-04-20 18:40:22,605 - services.trends_scraper - INFO - Topic #4: 'self.trending_topics_file = "trending_topics.txt"' - Used in last 24h: False
+2025-04-20 18:40:22,605 - services.trends_scraper - INFO - Topic #5: '"""Load previously used topics with timestamps"""' - Used in last 24h: False
+2025-04-20 18:40:22,606 - services.trends_scraper - INFO - Topic #6: 'except Exception as e:' - Used in last 24h: False
+2025-04-20 18:40:22,606 - services.trends_scraper - INFO - Topic #7: 'self.logger.error(f"Error loading used topics: {e}")' - Used in last 24h: False
+2025-04-20 18:40:22,606 - services.trends_scraper - INFO - Topic #8: '"""Save a topic as used with current timestamp"""' - Used in last 24h: False
+2025-04-20 18:40:22,606 - services.trends_scraper - INFO - Topic #9: 'used_topics = self._load_used_topics()' - Used in last 24h: False
+2025-04-20 18:40:22,606 - services.trends_scraper - INFO - Topic #10: '# Add current topic with timestamp' - Used in last 24h: False
+2025-04-20 18:40:22,606 - services.trends_scraper - INFO - Selected unused trending topic: 'self.region = region'
+2025-04-20 18:40:22,607 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: self.region = region
+2025-04-20 18:40:22,609 - services.trends_scraper - INFO - Using existing trending topics file (185 topics)
+2025-04-20 18:40:22,609 - services.trends_scraper - INFO - From file - Topic #1: self.region = region
+2025-04-20 18:40:22,609 - services.trends_scraper - INFO - From file - Topic #2: self.logger = Logger(__name__)
+2025-04-20 18:40:22,609 - services.trends_scraper - INFO - From file - Topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:40:22,609 - services.trends_scraper - INFO - From file - Topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:40:22,610 - services.trends_scraper - INFO - From file - Topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:40:22,610 - services.trends_scraper - INFO - Returning 5 trending topics:
+2025-04-20 18:40:22,610 - services.trends_scraper - INFO - Final topic #1: self.region = region
+2025-04-20 18:40:22,610 - services.trends_scraper - INFO - Final topic #2: self.logger = Logger(__name__)
+2025-04-20 18:40:22,610 - services.trends_scraper - INFO - Final topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:40:22,610 - services.trends_scraper - INFO - Final topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:40:22,610 - services.trends_scraper - INFO - Final topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:40:22,612 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: self.region = region
+2025-04-20 18:40:22,612 - services.news_scraper - INFO - Fetching news for topic: self.region = region
+2025-04-20 18:40:23,152 - services.news_scraper - INFO - Retrieved 0 news articles for topic: self.region = region
+2025-04-20 18:40:23,154 - services.news_scraper - WARNING - No articles found with exact topic match. Trying keyword search.
+2025-04-20 18:40:23,157 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 18:40:23,161 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 18:40:23,161 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 18:40:27,389 - services.script_generator - INFO - Generated script (3991 chars) and 6 image prompts
+2025-04-20 18:40:27,393 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-20 18:40:27,396 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-20 18:40:27,397 - services.tts_service - INFO - Generating audio from script (3991 chars)
+2025-04-20 18:40:27,397 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-20 18:43:27,574 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 18:43:30,185 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 18:43:30,186 - services.trends_scraper - INFO - Loaded 6 previously used topics
+2025-04-20 18:43:30,187 - services.trends_scraper - INFO - Scraping fresh trending topics
+2025-04-20 18:43:30,187 - services.trends_scraper - INFO - Scraping trending topics for region: US
+2025-04-20 18:43:32,685 - services.trends_scraper - INFO - Looking for Export button...
+2025-04-20 18:43:32,711 - services.trends_scraper - INFO - Clicking Export button...
+2025-04-20 18:43:34,843 - services.trends_scraper - INFO - Trying selector: //li[@data-action='clipboard']
+2025-04-20 18:43:34,910 - services.trends_scraper - INFO - Found 2 elements with selector //li[@data-action='clipboard']
+2025-04-20 18:43:34,925 - services.trends_scraper - INFO - Element 1 is displayed, clicking it...
+2025-04-20 18:43:38,034 - services.trends_scraper - INFO - Successfully retrieved trending topics from clipboard
+2025-04-20 18:43:38,036 - services.trends_scraper - INFO - Retrieved 185 valid trending topics
+2025-04-20 18:43:38,037 - services.trends_scraper - INFO - Trending topic #1: self.region = region
+2025-04-20 18:43:38,037 - services.trends_scraper - INFO - Trending topic #2: self.logger = Logger(__name__)
+2025-04-20 18:43:38,037 - services.trends_scraper - INFO - Trending topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:43:38,037 - services.trends_scraper - INFO - Trending topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:43:38,037 - services.trends_scraper - INFO - Trending topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:43:38,038 - services.trends_scraper - INFO - Trending topic #6: except Exception as e:
+2025-04-20 18:43:38,038 - services.trends_scraper - INFO - Trending topic #7: self.logger.error(f"Error loading used topics: {e}")
+2025-04-20 18:43:38,038 - services.trends_scraper - INFO - Trending topic #8: """Save a topic as used with current timestamp"""
+2025-04-20 18:43:38,038 - services.trends_scraper - INFO - Trending topic #9: used_topics = self._load_used_topics()
+2025-04-20 18:43:38,038 - services.trends_scraper - INFO - Trending topic #10: # Add current topic with timestamp
+2025-04-20 18:43:38,039 - services.trends_scraper - INFO - Trending topic #11: used_topics[topic] = datetime.now().isoformat()
+2025-04-20 18:43:38,039 - services.trends_scraper - INFO - Trending topic #12: # Remove topics older than 24 hours
+2025-04-20 18:43:38,039 - services.trends_scraper - INFO - Trending topic #13: current_time = datetime.now()
+2025-04-20 18:43:38,039 - services.trends_scraper - INFO - Trending topic #14: topics_to_keep = {}
+2025-04-20 18:43:38,040 - services.trends_scraper - INFO - Trending topic #15: timestamp_dt = datetime.fromisoformat(timestamp)
+2025-04-20 18:43:40,146 - services.trends_scraper - INFO - Returning 10 trending topics:
+2025-04-20 18:43:40,146 - services.trends_scraper - INFO - Final topic #1: self.region = region
+2025-04-20 18:43:40,146 - services.trends_scraper - INFO - Final topic #2: self.logger = Logger(__name__)
+2025-04-20 18:43:40,147 - services.trends_scraper - INFO - Final topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:43:40,147 - services.trends_scraper - INFO - Final topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:43:40,147 - services.trends_scraper - INFO - Final topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:43:40,147 - services.trends_scraper - INFO - Final topic #6: except Exception as e:
+2025-04-20 18:43:40,147 - services.trends_scraper - INFO - Final topic #7: self.logger.error(f"Error loading used topics: {e}")
+2025-04-20 18:43:40,147 - services.trends_scraper - INFO - Final topic #8: """Save a topic as used with current timestamp"""
+2025-04-20 18:43:40,147 - services.trends_scraper - INFO - Final topic #9: used_topics = self._load_used_topics()
+2025-04-20 18:43:40,147 - services.trends_scraper - INFO - Final topic #10: # Add current topic with timestamp
+2025-04-20 18:43:40,148 - services.trends_scraper - INFO - Considering these trending topics:
+2025-04-20 18:43:40,148 - services.trends_scraper - INFO - Topic #1: 'self.region = region' - Used in last 24h: True
+2025-04-20 18:43:40,148 - services.trends_scraper - INFO - Topic #2: 'self.logger = Logger(__name__)' - Used in last 24h: False
+2025-04-20 18:43:40,148 - services.trends_scraper - INFO - Topic #3: 'self.used_topics_file = "used_topics.json"' - Used in last 24h: False
+2025-04-20 18:43:40,148 - services.trends_scraper - INFO - Topic #4: 'self.trending_topics_file = "trending_topics.txt"' - Used in last 24h: False
+2025-04-20 18:43:40,148 - services.trends_scraper - INFO - Topic #5: '"""Load previously used topics with timestamps"""' - Used in last 24h: False
+2025-04-20 18:43:40,148 - services.trends_scraper - INFO - Topic #6: 'except Exception as e:' - Used in last 24h: False
+2025-04-20 18:43:40,148 - services.trends_scraper - INFO - Topic #7: 'self.logger.error(f"Error loading used topics: {e}")' - Used in last 24h: False
+2025-04-20 18:43:40,148 - services.trends_scraper - INFO - Topic #8: '"""Save a topic as used with current timestamp"""' - Used in last 24h: False
+2025-04-20 18:43:40,149 - services.trends_scraper - INFO - Topic #9: 'used_topics = self._load_used_topics()' - Used in last 24h: False
+2025-04-20 18:43:40,149 - services.trends_scraper - INFO - Topic #10: '# Add current topic with timestamp' - Used in last 24h: False
+2025-04-20 18:43:40,149 - services.trends_scraper - INFO - Selected unused trending topic: 'self.logger = Logger(__name__)'
+2025-04-20 18:43:40,149 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: self.logger = Logger(__name__)
+2025-04-20 18:43:40,150 - services.trends_scraper - INFO - Using existing trending topics file (185 topics)
+2025-04-20 18:43:40,150 - services.trends_scraper - INFO - From file - Topic #1: self.region = region
+2025-04-20 18:43:40,150 - services.trends_scraper - INFO - From file - Topic #2: self.logger = Logger(__name__)
+2025-04-20 18:43:40,150 - services.trends_scraper - INFO - From file - Topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:43:40,150 - services.trends_scraper - INFO - From file - Topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:43:40,151 - services.trends_scraper - INFO - From file - Topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:43:40,151 - services.trends_scraper - INFO - Returning 5 trending topics:
+2025-04-20 18:43:40,151 - services.trends_scraper - INFO - Final topic #1: self.region = region
+2025-04-20 18:43:40,151 - services.trends_scraper - INFO - Final topic #2: self.logger = Logger(__name__)
+2025-04-20 18:43:40,151 - services.trends_scraper - INFO - Final topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:43:40,151 - services.trends_scraper - INFO - Final topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:43:40,151 - services.trends_scraper - INFO - Final topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:43:40,153 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: self.logger = Logger(__name__)
+2025-04-20 18:43:40,153 - services.news_scraper - INFO - Fetching news for topic: self.logger = Logger(__name__)
+2025-04-20 18:44:45,431 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 18:44:47,929 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 18:44:47,932 - services.trends_scraper - INFO - Loaded 7 previously used topics
+2025-04-20 18:44:47,933 - services.trends_scraper - INFO - Using existing trending topics file (185 topics)
+2025-04-20 18:44:47,934 - services.trends_scraper - INFO - From file - Topic #1: self.region = region
+2025-04-20 18:44:47,934 - services.trends_scraper - INFO - From file - Topic #2: self.logger = Logger(__name__)
+2025-04-20 18:44:47,934 - services.trends_scraper - INFO - From file - Topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:44:47,934 - services.trends_scraper - INFO - From file - Topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:44:47,935 - services.trends_scraper - INFO - From file - Topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:44:47,935 - services.trends_scraper - INFO - From file - Topic #6: except Exception as e:
+2025-04-20 18:44:47,935 - services.trends_scraper - INFO - From file - Topic #7: self.logger.error(f"Error loading used topics: {e}")
+2025-04-20 18:44:47,935 - services.trends_scraper - INFO - From file - Topic #8: """Save a topic as used with current timestamp"""
+2025-04-20 18:44:47,935 - services.trends_scraper - INFO - From file - Topic #9: used_topics = self._load_used_topics()
+2025-04-20 18:44:47,936 - services.trends_scraper - INFO - From file - Topic #10: # Add current topic with timestamp
+2025-04-20 18:44:47,936 - services.trends_scraper - INFO - Returning 10 trending topics:
+2025-04-20 18:44:47,936 - services.trends_scraper - INFO - Final topic #1: self.region = region
+2025-04-20 18:44:47,937 - services.trends_scraper - INFO - Final topic #2: self.logger = Logger(__name__)
+2025-04-20 18:44:47,937 - services.trends_scraper - INFO - Final topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:44:47,937 - services.trends_scraper - INFO - Final topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:44:47,937 - services.trends_scraper - INFO - Final topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:44:47,937 - services.trends_scraper - INFO - Final topic #6: except Exception as e:
+2025-04-20 18:44:47,938 - services.trends_scraper - INFO - Final topic #7: self.logger.error(f"Error loading used topics: {e}")
+2025-04-20 18:44:47,938 - services.trends_scraper - INFO - Final topic #8: """Save a topic as used with current timestamp"""
+2025-04-20 18:44:47,938 - services.trends_scraper - INFO - Final topic #9: used_topics = self._load_used_topics()
+2025-04-20 18:44:47,938 - services.trends_scraper - INFO - Final topic #10: # Add current topic with timestamp
+2025-04-20 18:44:47,939 - services.trends_scraper - INFO - Considering these trending topics:
+2025-04-20 18:44:47,939 - services.trends_scraper - INFO - Topic #1: 'self.region = region' - Used in last 24h: True
+2025-04-20 18:44:47,939 - services.trends_scraper - INFO - Topic #2: 'self.logger = Logger(__name__)' - Used in last 24h: True
+2025-04-20 18:44:47,939 - services.trends_scraper - INFO - Topic #3: 'self.used_topics_file = "used_topics.json"' - Used in last 24h: False
+2025-04-20 18:44:47,939 - services.trends_scraper - INFO - Topic #4: 'self.trending_topics_file = "trending_topics.txt"' - Used in last 24h: False
+2025-04-20 18:44:47,939 - services.trends_scraper - INFO - Topic #5: '"""Load previously used topics with timestamps"""' - Used in last 24h: False
+2025-04-20 18:44:47,940 - services.trends_scraper - INFO - Topic #6: 'except Exception as e:' - Used in last 24h: False
+2025-04-20 18:44:47,940 - services.trends_scraper - INFO - Topic #7: 'self.logger.error(f"Error loading used topics: {e}")' - Used in last 24h: False
+2025-04-20 18:44:47,940 - services.trends_scraper - INFO - Topic #8: '"""Save a topic as used with current timestamp"""' - Used in last 24h: False
+2025-04-20 18:44:47,940 - services.trends_scraper - INFO - Topic #9: 'used_topics = self._load_used_topics()' - Used in last 24h: False
+2025-04-20 18:44:47,940 - services.trends_scraper - INFO - Topic #10: '# Add current topic with timestamp' - Used in last 24h: False
+2025-04-20 18:44:47,941 - services.trends_scraper - INFO - Selected unused trending topic: 'self.used_topics_file = "used_topics.json"'
+2025-04-20 18:44:47,943 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: self.used_topics_file = "used_topics.json"
+2025-04-20 18:44:47,945 - services.trends_scraper - INFO - Using existing trending topics file (185 topics)
+2025-04-20 18:44:47,946 - services.trends_scraper - INFO - From file - Topic #1: self.region = region
+2025-04-20 18:44:47,946 - services.trends_scraper - INFO - From file - Topic #2: self.logger = Logger(__name__)
+2025-04-20 18:44:47,947 - services.trends_scraper - INFO - From file - Topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:44:47,947 - services.trends_scraper - INFO - From file - Topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:44:47,947 - services.trends_scraper - INFO - From file - Topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:44:47,947 - services.trends_scraper - INFO - Returning 5 trending topics:
+2025-04-20 18:44:47,948 - services.trends_scraper - INFO - Final topic #1: self.region = region
+2025-04-20 18:44:47,948 - services.trends_scraper - INFO - Final topic #2: self.logger = Logger(__name__)
+2025-04-20 18:44:47,948 - services.trends_scraper - INFO - Final topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:44:47,948 - services.trends_scraper - INFO - Final topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:44:47,948 - services.trends_scraper - INFO - Final topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:44:47,951 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: self.used_topics_file = "used_topics.json"
+2025-04-20 18:44:47,951 - services.news_scraper - INFO - Fetching news for topic: self.used_topics_file = "used_topics.json"
+2025-04-20 18:44:48,588 - services.news_scraper - INFO - Retrieved 0 news articles for topic: self.used_topics_file = "used_topics.json"
+2025-04-20 18:44:48,595 - services.news_scraper - WARNING - No articles found with exact topic match. Trying keyword search.
+2025-04-20 18:44:48,598 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 18:44:48,600 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 18:44:48,600 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 18:45:12,043 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 18:45:14,804 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 18:45:14,811 - services.trends_scraper - INFO - Loaded 8 previously used topics
+2025-04-20 18:45:14,811 - services.trends_scraper - INFO - Scraping fresh trending topics
+2025-04-20 18:45:14,811 - services.trends_scraper - INFO - Scraping trending topics for region: US
+2025-04-20 18:45:17,608 - services.trends_scraper - INFO - Looking for Export button...
+2025-04-20 18:45:17,641 - services.trends_scraper - INFO - Clicking Export button...
+2025-04-20 18:45:19,734 - services.trends_scraper - INFO - Trying selector: //li[@data-action='clipboard']
+2025-04-20 18:45:19,754 - services.trends_scraper - INFO - Found 2 elements with selector //li[@data-action='clipboard']
+2025-04-20 18:45:19,777 - services.trends_scraper - INFO - Element 1 is displayed, clicking it...
+2025-04-20 18:45:22,867 - services.trends_scraper - INFO - Successfully retrieved trending topics from clipboard
+2025-04-20 18:45:22,868 - services.trends_scraper - INFO - Retrieved 185 valid trending topics
+2025-04-20 18:45:22,869 - services.trends_scraper - INFO - Trending topic #1: self.region = region
+2025-04-20 18:45:22,870 - services.trends_scraper - INFO - Trending topic #2: self.logger = Logger(__name__)
+2025-04-20 18:45:22,870 - services.trends_scraper - INFO - Trending topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:45:22,870 - services.trends_scraper - INFO - Trending topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:45:22,870 - services.trends_scraper - INFO - Trending topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:45:22,872 - services.trends_scraper - INFO - Trending topic #6: except Exception as e:
+2025-04-20 18:45:22,872 - services.trends_scraper - INFO - Trending topic #7: self.logger.error(f"Error loading used topics: {e}")
+2025-04-20 18:45:22,872 - services.trends_scraper - INFO - Trending topic #8: """Save a topic as used with current timestamp"""
+2025-04-20 18:45:22,872 - services.trends_scraper - INFO - Trending topic #9: used_topics = self._load_used_topics()
+2025-04-20 18:45:22,872 - services.trends_scraper - INFO - Trending topic #10: # Add current topic with timestamp
+2025-04-20 18:45:22,872 - services.trends_scraper - INFO - Trending topic #11: used_topics[topic] = datetime.now().isoformat()
+2025-04-20 18:45:22,872 - services.trends_scraper - INFO - Trending topic #12: # Remove topics older than 24 hours
+2025-04-20 18:45:22,872 - services.trends_scraper - INFO - Trending topic #13: current_time = datetime.now()
+2025-04-20 18:45:22,873 - services.trends_scraper - INFO - Trending topic #14: topics_to_keep = {}
+2025-04-20 18:45:22,873 - services.trends_scraper - INFO - Trending topic #15: timestamp_dt = datetime.fromisoformat(timestamp)
+2025-04-20 18:45:25,053 - services.trends_scraper - INFO - Returning 10 trending topics:
+2025-04-20 18:45:25,053 - services.trends_scraper - INFO - Final topic #1: self.region = region
+2025-04-20 18:45:25,053 - services.trends_scraper - INFO - Final topic #2: self.logger = Logger(__name__)
+2025-04-20 18:45:25,054 - services.trends_scraper - INFO - Final topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:45:25,054 - services.trends_scraper - INFO - Final topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:45:25,054 - services.trends_scraper - INFO - Final topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:45:25,054 - services.trends_scraper - INFO - Final topic #6: except Exception as e:
+2025-04-20 18:45:25,054 - services.trends_scraper - INFO - Final topic #7: self.logger.error(f"Error loading used topics: {e}")
+2025-04-20 18:45:25,054 - services.trends_scraper - INFO - Final topic #8: """Save a topic as used with current timestamp"""
+2025-04-20 18:45:25,055 - services.trends_scraper - INFO - Final topic #9: used_topics = self._load_used_topics()
+2025-04-20 18:45:25,055 - services.trends_scraper - INFO - Final topic #10: # Add current topic with timestamp
+2025-04-20 18:45:25,055 - services.trends_scraper - INFO - Considering these trending topics:
+2025-04-20 18:45:25,056 - services.trends_scraper - INFO - Topic #1: 'self.region = region' - Used in last 24h: True
+2025-04-20 18:45:25,056 - services.trends_scraper - INFO - Topic #2: 'self.logger = Logger(__name__)' - Used in last 24h: True
+2025-04-20 18:45:25,056 - services.trends_scraper - INFO - Topic #3: 'self.used_topics_file = "used_topics.json"' - Used in last 24h: True
+2025-04-20 18:45:25,056 - services.trends_scraper - INFO - Topic #4: 'self.trending_topics_file = "trending_topics.txt"' - Used in last 24h: False
+2025-04-20 18:45:25,056 - services.trends_scraper - INFO - Topic #5: '"""Load previously used topics with timestamps"""' - Used in last 24h: False
+2025-04-20 18:45:25,056 - services.trends_scraper - INFO - Topic #6: 'except Exception as e:' - Used in last 24h: False
+2025-04-20 18:45:25,057 - services.trends_scraper - INFO - Topic #7: 'self.logger.error(f"Error loading used topics: {e}")' - Used in last 24h: False
+2025-04-20 18:45:25,057 - services.trends_scraper - INFO - Topic #8: '"""Save a topic as used with current timestamp"""' - Used in last 24h: False
+2025-04-20 18:45:25,057 - services.trends_scraper - INFO - Topic #9: 'used_topics = self._load_used_topics()' - Used in last 24h: False
+2025-04-20 18:45:25,057 - services.trends_scraper - INFO - Topic #10: '# Add current topic with timestamp' - Used in last 24h: False
+2025-04-20 18:45:25,057 - services.trends_scraper - INFO - Selected unused trending topic: 'self.trending_topics_file = "trending_topics.txt"'
+2025-04-20 18:45:25,058 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:45:25,059 - services.trends_scraper - INFO - Using existing trending topics file (185 topics)
+2025-04-20 18:45:25,059 - services.trends_scraper - INFO - From file - Topic #1: self.region = region
+2025-04-20 18:45:25,059 - services.trends_scraper - INFO - From file - Topic #2: self.logger = Logger(__name__)
+2025-04-20 18:45:25,059 - services.trends_scraper - INFO - From file - Topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:45:25,059 - services.trends_scraper - INFO - From file - Topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:45:25,060 - services.trends_scraper - INFO - From file - Topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:45:25,060 - services.trends_scraper - INFO - Returning 5 trending topics:
+2025-04-20 18:45:25,060 - services.trends_scraper - INFO - Final topic #1: self.region = region
+2025-04-20 18:45:25,060 - services.trends_scraper - INFO - Final topic #2: self.logger = Logger(__name__)
+2025-04-20 18:45:25,060 - services.trends_scraper - INFO - Final topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:45:25,060 - services.trends_scraper - INFO - Final topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:45:25,060 - services.trends_scraper - INFO - Final topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:45:25,061 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:45:25,061 - services.news_scraper - INFO - Fetching news for topic: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:45:25,636 - services.news_scraper - INFO - Retrieved 0 news articles for topic: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:45:25,637 - services.news_scraper - WARNING - No articles found with exact topic match. Trying keyword search.
+2025-04-20 18:45:25,640 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 18:45:25,641 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 18:45:25,641 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 18:48:41,695 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 18:48:46,605 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 18:48:46,609 - services.trends_scraper - INFO - Loaded 9 previously used topics
+2025-04-20 18:48:46,609 - services.trends_scraper - INFO - Scraping fresh trending topics
+2025-04-20 18:48:46,609 - services.trends_scraper - INFO - Scraping trending topics for region: US
+2025-04-20 18:48:49,299 - services.trends_scraper - INFO - Looking for Export button...
+2025-04-20 18:48:49,329 - services.trends_scraper - INFO - Clicking Export button...
+2025-04-20 18:48:51,466 - services.trends_scraper - INFO - Trying selector: //li[@data-action='clipboard']
+2025-04-20 18:48:51,551 - services.trends_scraper - INFO - Found 2 elements with selector //li[@data-action='clipboard']
+2025-04-20 18:48:51,570 - services.trends_scraper - INFO - Element 1 is displayed, clicking it...
+2025-04-20 18:48:54,732 - services.trends_scraper - INFO - Successfully retrieved trending topics from clipboard
+2025-04-20 18:48:54,737 - services.trends_scraper - INFO - Retrieved 1 valid trending topics
+2025-04-20 18:48:54,738 - services.trends_scraper - INFO - Trending topic #1: self.region = region
+2025-04-20 18:48:56,921 - services.trends_scraper - INFO - Returning 1 trending topics:
+2025-04-20 18:48:56,942 - services.trends_scraper - INFO - Final topic #1: self.region = region
+2025-04-20 18:48:56,951 - services.trends_scraper - INFO - Considering these trending topics:
+2025-04-20 18:48:56,951 - services.trends_scraper - INFO - Topic #1: 'self.region = region' - Used in last 24h: True
+2025-04-20 18:48:56,951 - services.trends_scraper - INFO - All topics have been used in the past 24h. Reusing top topic: 'self.region = region'
+2025-04-20 18:48:56,953 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: self.region = region
+2025-04-20 18:48:56,953 - services.trends_scraper - INFO - Using existing trending topics file (1 topics)
+2025-04-20 18:48:56,954 - services.trends_scraper - INFO - From file - Topic #1: self.region = region
+2025-04-20 18:48:56,954 - services.trends_scraper - INFO - Returning 1 trending topics:
+2025-04-20 18:48:56,954 - services.trends_scraper - INFO - Final topic #1: self.region = region
+2025-04-20 18:48:56,957 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: self.region = region
+2025-04-20 18:48:56,958 - services.news_scraper - INFO - Fetching news for topic: self.region = region
+2025-04-20 18:48:57,626 - services.news_scraper - INFO - Retrieved 0 news articles for topic: self.region = region
+2025-04-20 18:48:57,628 - services.news_scraper - WARNING - No articles found with exact topic match. Trying keyword search.
+2025-04-20 18:48:57,631 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 18:48:57,636 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 18:48:57,637 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 18:56:46,111 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 18:56:49,586 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 18:56:49,589 - services.trends_scraper - INFO - Loaded 0 previously used topics
+2025-04-20 18:56:49,589 - services.trends_scraper - INFO - Scraping fresh trending topics
+2025-04-20 18:56:49,589 - services.trends_scraper - INFO - Scraping trending topics for region: US
+2025-04-20 18:56:52,154 - services.trends_scraper - INFO - Looking for Export button...
+2025-04-20 18:56:52,189 - services.trends_scraper - INFO - Clicking Export button...
+2025-04-20 18:56:54,340 - services.trends_scraper - INFO - Trying selector: //li[@data-action='clipboard']
+2025-04-20 18:56:54,363 - services.trends_scraper - INFO - Found 2 elements with selector //li[@data-action='clipboard']
+2025-04-20 18:56:54,375 - services.trends_scraper - INFO - Element 1 is displayed, clicking it...
+2025-04-20 18:56:57,427 - services.trends_scraper - INFO - Successfully retrieved trending topics from clipboard
+2025-04-20 18:56:57,428 - services.trends_scraper - INFO - Retrieved 189 valid trending topics
+2025-04-20 18:56:57,429 - services.trends_scraper - INFO - Trending topic #1: self.region = region
+2025-04-20 18:56:57,429 - services.trends_scraper - INFO - Trending topic #2: self.logger = Logger(__name__)
+2025-04-20 18:56:57,429 - services.trends_scraper - INFO - Trending topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:56:57,430 - services.trends_scraper - INFO - Trending topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:56:57,431 - services.trends_scraper - INFO - Trending topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:56:57,431 - services.trends_scraper - INFO - Trending topic #6: except Exception as e:
+2025-04-20 18:56:57,432 - services.trends_scraper - INFO - Trending topic #7: self.logger.error(f"Error loading used topics: {e}")
+2025-04-20 18:56:57,432 - services.trends_scraper - INFO - Trending topic #8: """Save a topic as used with current timestamp"""
+2025-04-20 18:56:57,432 - services.trends_scraper - INFO - Trending topic #9: used_topics = self._load_used_topics()
+2025-04-20 18:56:57,434 - services.trends_scraper - INFO - Trending topic #10: # Add current topic with timestamp
+2025-04-20 18:56:57,434 - services.trends_scraper - INFO - Trending topic #11: used_topics[topic] = datetime.now().isoformat()
+2025-04-20 18:56:57,434 - services.trends_scraper - INFO - Trending topic #12: # Remove topics older than 24 hours
+2025-04-20 18:56:57,435 - services.trends_scraper - INFO - Trending topic #13: current_time = datetime.now()
+2025-04-20 18:56:57,435 - services.trends_scraper - INFO - Trending topic #14: topics_to_keep = {}
+2025-04-20 18:56:57,436 - services.trends_scraper - INFO - Trending topic #15: timestamp_dt = datetime.fromisoformat(timestamp)
+2025-04-20 18:56:59,646 - services.trends_scraper - INFO - Returning 10 trending topics:
+2025-04-20 18:56:59,647 - services.trends_scraper - INFO - Final topic #1: self.region = region
+2025-04-20 18:56:59,647 - services.trends_scraper - INFO - Final topic #2: self.logger = Logger(__name__)
+2025-04-20 18:56:59,648 - services.trends_scraper - INFO - Final topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:56:59,648 - services.trends_scraper - INFO - Final topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:56:59,649 - services.trends_scraper - INFO - Final topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:56:59,649 - services.trends_scraper - INFO - Final topic #6: except Exception as e:
+2025-04-20 18:56:59,649 - services.trends_scraper - INFO - Final topic #7: self.logger.error(f"Error loading used topics: {e}")
+2025-04-20 18:56:59,649 - services.trends_scraper - INFO - Final topic #8: """Save a topic as used with current timestamp"""
+2025-04-20 18:56:59,650 - services.trends_scraper - INFO - Final topic #9: used_topics = self._load_used_topics()
+2025-04-20 18:56:59,650 - services.trends_scraper - INFO - Final topic #10: # Add current topic with timestamp
+2025-04-20 18:56:59,650 - services.trends_scraper - INFO - Considering these trending topics:
+2025-04-20 18:56:59,651 - services.trends_scraper - INFO - Topic #1: 'self.region = region' - Used in last 24h: False
+2025-04-20 18:56:59,651 - services.trends_scraper - INFO - Topic #2: 'self.logger = Logger(__name__)' - Used in last 24h: False
+2025-04-20 18:56:59,651 - services.trends_scraper - INFO - Topic #3: 'self.used_topics_file = "used_topics.json"' - Used in last 24h: False
+2025-04-20 18:56:59,651 - services.trends_scraper - INFO - Topic #4: 'self.trending_topics_file = "trending_topics.txt"' - Used in last 24h: False
+2025-04-20 18:56:59,651 - services.trends_scraper - INFO - Topic #5: '"""Load previously used topics with timestamps"""' - Used in last 24h: False
+2025-04-20 18:56:59,651 - services.trends_scraper - INFO - Topic #6: 'except Exception as e:' - Used in last 24h: False
+2025-04-20 18:56:59,651 - services.trends_scraper - INFO - Topic #7: 'self.logger.error(f"Error loading used topics: {e}")' - Used in last 24h: False
+2025-04-20 18:56:59,651 - services.trends_scraper - INFO - Topic #8: '"""Save a topic as used with current timestamp"""' - Used in last 24h: False
+2025-04-20 18:56:59,651 - services.trends_scraper - INFO - Topic #9: 'used_topics = self._load_used_topics()' - Used in last 24h: False
+2025-04-20 18:56:59,652 - services.trends_scraper - INFO - Topic #10: '# Add current topic with timestamp' - Used in last 24h: False
+2025-04-20 18:56:59,661 - services.trends_scraper - INFO - Selected unused trending topic: 'self.region = region'
+2025-04-20 18:56:59,665 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: self.region = region
+2025-04-20 18:56:59,668 - services.trends_scraper - INFO - Using existing trending topics file (189 topics)
+2025-04-20 18:56:59,670 - services.trends_scraper - INFO - From file - Topic #1: self.region = region
+2025-04-20 18:56:59,670 - services.trends_scraper - INFO - From file - Topic #2: self.logger = Logger(__name__)
+2025-04-20 18:56:59,671 - services.trends_scraper - INFO - From file - Topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:56:59,671 - services.trends_scraper - INFO - From file - Topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:56:59,671 - services.trends_scraper - INFO - From file - Topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:56:59,671 - services.trends_scraper - INFO - Returning 5 trending topics:
+2025-04-20 18:56:59,671 - services.trends_scraper - INFO - Final topic #1: self.region = region
+2025-04-20 18:56:59,672 - services.trends_scraper - INFO - Final topic #2: self.logger = Logger(__name__)
+2025-04-20 18:56:59,672 - services.trends_scraper - INFO - Final topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 18:56:59,672 - services.trends_scraper - INFO - Final topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 18:56:59,672 - services.trends_scraper - INFO - Final topic #5: """Load previously used topics with timestamps"""
+2025-04-20 18:56:59,674 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: self.region = region
+2025-04-20 18:56:59,674 - services.news_scraper - INFO - Fetching news for topic: self.region = region
+2025-04-20 18:57:00,373 - services.news_scraper - INFO - Retrieved 0 news articles for topic: self.region = region
+2025-04-20 18:57:00,375 - services.news_scraper - WARNING - No articles found with exact topic match. Trying keyword search.
+2025-04-20 18:57:00,377 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 18:57:00,378 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 18:57:00,378 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 19:09:10,853 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 19:09:15,803 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 19:09:15,804 - services.trends_scraper - INFO - Loaded 1 previously used topics
+2025-04-20 19:09:15,806 - services.trends_scraper - INFO - Using existing trending topics file (189 topics)
+2025-04-20 19:09:15,806 - services.trends_scraper - INFO - Returning 10 trending topics:
+2025-04-20 19:09:15,807 - services.trends_scraper - INFO - Final topic #1: self.region = region
+2025-04-20 19:09:15,807 - services.trends_scraper - INFO - Final topic #2: self.logger = Logger(__name__)
+2025-04-20 19:09:15,807 - services.trends_scraper - INFO - Final topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 19:09:15,807 - services.trends_scraper - INFO - Final topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 19:09:15,808 - services.trends_scraper - INFO - Final topic #5: """Load previously used topics with timestamps"""
+2025-04-20 19:09:15,808 - services.trends_scraper - INFO - Final topic #6: except Exception as e:
+2025-04-20 19:09:15,808 - services.trends_scraper - INFO - Final topic #7: self.logger.error(f"Error loading used topics: {e}")
+2025-04-20 19:09:15,809 - services.trends_scraper - INFO - Final topic #8: """Save a topic as used with current timestamp"""
+2025-04-20 19:09:15,809 - services.trends_scraper - INFO - Final topic #9: used_topics = self._load_used_topics()
+2025-04-20 19:09:15,809 - services.trends_scraper - INFO - Final topic #10: # Add current topic with timestamp
+2025-04-20 19:09:15,809 - services.trends_scraper - INFO - Considering these trending topics:
+2025-04-20 19:09:15,810 - services.trends_scraper - INFO - Topic #1: 'self.region = region' - Used in last 24h: True
+2025-04-20 19:09:15,810 - services.trends_scraper - INFO - Topic #2: 'self.logger = Logger(__name__)' - Used in last 24h: False
+2025-04-20 19:09:15,810 - services.trends_scraper - INFO - Topic #3: 'self.used_topics_file = "used_topics.json"' - Used in last 24h: False
+2025-04-20 19:09:15,810 - services.trends_scraper - INFO - Topic #4: 'self.trending_topics_file = "trending_topics.txt"' - Used in last 24h: False
+2025-04-20 19:09:15,810 - services.trends_scraper - INFO - Topic #5: '"""Load previously used topics with timestamps"""' - Used in last 24h: False
+2025-04-20 19:09:15,811 - services.trends_scraper - INFO - Topic #6: 'except Exception as e:' - Used in last 24h: False
+2025-04-20 19:09:15,811 - services.trends_scraper - INFO - Topic #7: 'self.logger.error(f"Error loading used topics: {e}")' - Used in last 24h: False
+2025-04-20 19:09:15,813 - services.trends_scraper - INFO - Topic #8: '"""Save a topic as used with current timestamp"""' - Used in last 24h: False
+2025-04-20 19:09:15,813 - services.trends_scraper - INFO - Topic #9: 'used_topics = self._load_used_topics()' - Used in last 24h: False
+2025-04-20 19:09:15,813 - services.trends_scraper - INFO - Topic #10: '# Add current topic with timestamp' - Used in last 24h: False
+2025-04-20 19:09:15,813 - services.trends_scraper - INFO - Selected unused trending topic: 'self.logger = Logger(__name__)'
+2025-04-20 19:09:15,815 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: self.logger = Logger(__name__)
+2025-04-20 19:09:15,818 - services.trends_scraper - INFO - Using existing trending topics file (189 topics)
+2025-04-20 19:09:15,818 - services.trends_scraper - INFO - Returning 5 trending topics:
+2025-04-20 19:09:15,818 - services.trends_scraper - INFO - Final topic #1: self.region = region
+2025-04-20 19:09:15,820 - services.trends_scraper - INFO - Final topic #2: self.logger = Logger(__name__)
+2025-04-20 19:09:15,820 - services.trends_scraper - INFO - Final topic #3: self.used_topics_file = "used_topics.json"
+2025-04-20 19:09:15,820 - services.trends_scraper - INFO - Final topic #4: self.trending_topics_file = "trending_topics.txt"
+2025-04-20 19:09:15,820 - services.trends_scraper - INFO - Final topic #5: """Load previously used topics with timestamps"""
+2025-04-20 19:09:15,824 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: self.logger = Logger(__name__)
+2025-04-20 19:09:15,824 - services.news_scraper - INFO - Fetching news for topic: self.logger = Logger(__name__)
+2025-04-20 19:09:16,634 - services.news_scraper - INFO - Retrieved 0 news articles for topic: self.logger = Logger(__name__)
+2025-04-20 19:09:16,634 - services.news_scraper - WARNING - No articles found with exact topic match. Trying keyword search.
+2025-04-20 19:09:16,636 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 19:09:16,639 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 19:09:16,640 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 19:14:15,987 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 19:14:18,996 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 19:14:18,998 - services.trends_scraper - INFO - Loaded 2 previously used topics
+2025-04-20 19:14:19,000 - services.trends_scraper - INFO - Scraping fresh trending topics (ignoring cached file)
+2025-04-20 19:14:19,005 - services.trends_scraper - INFO - Scraping trending topics for region: US
+2025-04-20 19:14:19,009 - services.trends_scraper - INFO - Removed existing trending topics file before scraping
+2025-04-20 19:14:19,026 - services.trends_scraper - INFO - Clipboard cleared before scraping
+2025-04-20 19:14:21,657 - services.trends_scraper - INFO - Navigated to Google Trends Daily Trending Searches page for US
+2025-04-20 19:14:21,886 - services.trends_scraper - INFO - Screenshot saved as trends_page_0.png
+2025-04-20 19:14:21,888 - services.trends_scraper - INFO - Attempting to scrape trends directly from the page
+2025-04-20 19:14:52,126 - services.trends_scraper - WARNING - Error during direct scraping: Message: 
+. Trying export method.
+2025-04-20 19:14:52,126 - services.trends_scraper - INFO - Looking for Export button...
+2025-04-20 19:14:52,161 - services.trends_scraper - INFO - Found Export button, clicking it...
+2025-04-20 19:14:56,201 - services.trends_scraper - INFO - JavaScript click on 'Copy to clipboard' successful
+2025-04-20 19:14:59,204 - services.trends_scraper - INFO - Raw clipboard content length: 0
+2025-04-20 19:14:59,205 - services.trends_scraper - WARNING - Clipboard is empty after attempted copy
+2025-04-20 19:14:59,205 - services.trends_scraper - INFO - Retrying (attempt 1/3)...
+2025-04-20 19:15:06,356 - services.trends_scraper - INFO - Clipboard cleared before scraping
+2025-04-20 19:15:09,357 - services.trends_scraper - INFO - Navigated to Google Trends Daily Trending Searches page for US
+2025-04-20 19:15:09,519 - services.trends_scraper - INFO - Screenshot saved as trends_page_1.png
+2025-04-20 19:15:09,519 - services.trends_scraper - INFO - Attempting to scrape trends directly from the page
+2025-04-20 19:15:39,696 - services.trends_scraper - WARNING - Error during direct scraping: Message: 
+. Trying export method.
+2025-04-20 19:15:39,696 - services.trends_scraper - INFO - Looking for Export button...
+2025-04-20 19:15:39,717 - services.trends_scraper - INFO - Found Export button, clicking it...
+2025-04-20 19:15:43,739 - services.trends_scraper - INFO - JavaScript click on 'Copy to clipboard' successful
+2025-04-20 19:15:46,740 - services.trends_scraper - INFO - Raw clipboard content length: 0
+2025-04-20 19:15:46,740 - services.trends_scraper - WARNING - Clipboard is empty after attempted copy
+2025-04-20 19:15:46,741 - services.trends_scraper - INFO - Retrying (attempt 2/3)...
+2025-04-20 19:28:45,051 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 19:28:48,383 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 19:28:48,384 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-20 19:28:57,464 - services.trends_scraper - INFO - Retrieved 612 trending topics
+2025-04-20 19:28:59,614 - services.trends_scraper - INFO - Selected best trending topic: real madrid - athletic
+2025-04-20 19:28:59,614 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: real madrid - athletic
+2025-04-20 19:28:59,618 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-20 19:29:08,203 - services.trends_scraper - INFO - Retrieved 612 trending topics
+2025-04-20 19:29:10,351 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: real madrid - athletic
+2025-04-20 19:29:10,351 - services.news_scraper - INFO - Fetching news for topic: real madrid - athletic
+2025-04-20 19:29:11,108 - services.news_scraper - INFO - Retrieved 0 news articles for topic: real madrid - athletic
+2025-04-20 19:29:11,112 - services.news_scraper - WARNING - No articles found with exact topic match. Trying keyword search.
+2025-04-20 19:29:11,115 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 19:29:11,120 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 19:29:11,121 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 20:30:32,202 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 20:30:35,225 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 20:30:35,227 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-20 20:30:44,069 - services.trends_scraper - INFO - Retrieved 613 trending topics
+2025-04-20 20:30:46,237 - services.trends_scraper - INFO - Selected best trending topic: real madrid - athletic
+2025-04-20 20:30:46,237 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: real madrid - athletic
+2025-04-20 20:30:46,238 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-20 20:30:54,379 - services.trends_scraper - INFO - Retrieved 613 trending topics
+2025-04-20 20:30:56,512 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: real madrid - athletic
+2025-04-20 20:30:56,512 - services.news_scraper - INFO - Fetching news for topic: real madrid - athletic
+2025-04-20 20:31:01,054 - services.news_scraper - INFO - Retrieved 5 news articles for topic: real madrid - athletic
+2025-04-20 20:31:06,562 - services.news_scraper - INFO - Successfully consolidated news articles
+2025-04-20 20:31:06,564 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 20:31:06,565 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 20:31:06,565 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 20:31:13,071 - services.script_generator - INFO - Generated script (4717 chars) and 7 image prompts
+2025-04-20 20:31:13,074 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-20 20:31:13,078 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-20 20:31:13,078 - services.tts_service - INFO - Generating audio from script (4717 chars)
+2025-04-20 20:31:13,079 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-20 21:01:42,830 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 21:01:46,342 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 21:01:46,343 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-20 21:01:54,761 - services.trends_scraper - INFO - Retrieved 607 trending topics
+2025-04-20 21:01:57,034 - services.trends_scraper - INFO - Selected best trending topic: real madrid - athletic
+2025-04-20 21:01:57,035 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: real madrid - athletic
+2025-04-20 21:01:57,035 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-20 21:02:05,336 - services.trends_scraper - INFO - Retrieved 607 trending topics
+2025-04-20 21:02:07,466 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: real madrid - athletic
+2025-04-20 21:02:07,466 - services.news_scraper - INFO - Fetching news for topic: real madrid - athletic
+2025-04-20 21:02:07,979 - services.news_scraper - INFO - Retrieved 5 news articles for topic: real madrid - athletic
+2025-04-20 21:02:13,204 - services.news_scraper - INFO - Successfully consolidated news articles
+2025-04-20 21:02:13,206 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 21:02:13,208 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 21:02:13,208 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 21:02:17,086 - services.script_generator - INFO - Generated script (3225 chars) and 6 image prompts
+2025-04-20 21:02:17,093 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-20 21:02:17,096 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-20 21:02:17,097 - services.tts_service - INFO - Generating audio from script (3225 chars)
+2025-04-20 21:02:17,097 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-20 21:02:21,109 - services.tts_service - INFO - Audio content written to output\audio\audio_1745197337.mp3
+2025-04-20 21:02:21,110 - orchestration.nodes.media_nodes - INFO - Generating images from 6 prompts
+2025-04-20 21:02:21,110 - services.image_generator - INFO - Generating 6 images
+2025-04-20 21:02:21,111 - services.image_generator - INFO - Downloading image 1/6: **...
+2025-04-20 21:02:21,965 - services.image_generator - INFO - Downloaded image to output\images\___42.jpg
+2025-04-20 21:02:22,967 - services.image_generator - INFO - Downloading image 2/6: Dramatic stadium scene with pl...
+2025-04-20 21:02:26,579 - services.image_generator - INFO - Downloaded image to output\images\dramatic_stadium_scene_with_players_celebrating_a_43.jpg
+2025-04-20 21:02:27,581 - services.image_generator - INFO - Downloading image 3/6: Federico Valverde in action, s...
+2025-04-20 22:11:47,416 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 22:11:53,391 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 22:11:53,391 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-20 22:12:02,172 - services.trends_scraper - INFO - Retrieved 587 trending topics
+2025-04-20 22:12:04,304 - services.trends_scraper - INFO - Selected best trending topic: heat vs cavaliers
+2025-04-20 22:12:04,305 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: heat vs cavaliers
+2025-04-20 22:12:04,307 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-20 22:12:12,844 - services.trends_scraper - INFO - Retrieved 583 trending topics
+2025-04-20 22:12:14,989 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: heat vs cavaliers
+2025-04-20 22:12:14,989 - services.news_scraper - INFO - Fetching news for topic: heat vs cavaliers
+2025-04-20 22:12:19,989 - services.news_scraper - INFO - Retrieved 5 news articles for topic: heat vs cavaliers
+2025-04-20 22:12:25,133 - services.news_scraper - INFO - Successfully consolidated news articles
+2025-04-20 22:12:25,136 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 22:12:25,139 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 22:12:25,139 - services.script_generator - INFO - Generating YouTube Short script and image prompts
+2025-04-20 22:12:28,174 - services.script_generator - INFO - Successfully generated script (691 chars) and 4 image prompts
+2025-04-20 22:12:28,180 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-20 22:12:28,182 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-20 22:12:28,183 - services.tts_service - INFO - Generating audio from script (691 chars)
+2025-04-20 22:12:28,183 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-20 22:12:29,320 - services.tts_service - INFO - Audio content written to output\audio\audio_1745201548.mp3
+2025-04-20 22:12:29,323 - orchestration.nodes.media_nodes - INFO - Generating images from 4 prompts
+2025-04-20 22:12:29,323 - services.image_generator - INFO - Generating 4 images
+2025-04-20 22:12:29,324 - services.image_generator - INFO - Downloading image 1/4: **Playoff Bracket Reveal**  
+"...
+2025-04-20 22:12:33,374 - services.image_generator - ERROR - Error generating image for prompt '**Playoff Bracket Reveal**  
+"...': [Errno 22] Invalid argument: 'output\\images\\__playoff_bracket_reveal____\n_vertical_video_frame_42.jpg'
+2025-04-20 22:12:33,375 - services.image_generator - INFO - Downloading image 2/4: **Cavaliers vs. Heat Game**  
+...
+2025-04-20 22:12:36,135 - services.image_generator - ERROR - Error generating image for prompt '**Cavaliers vs. Heat Game**  
+...': [Errno 22] Invalid argument: 'output\\images\\__cavaliers_vs__heat_game____\n_vertical_shot_of_ca_43.jpg'
+2025-04-20 22:12:36,136 - services.image_generator - INFO - Downloading image 3/4: **Warriors vs. Rockets Intense...
+2025-04-20 22:12:38,945 - services.image_generator - ERROR - Error generating image for prompt '**Warriors vs. Rockets Intense...': [Errno 22] Invalid argument: 'output\\images\\__warriors_vs__rockets_intense_moment____\n_vertica_44.jpg'
+2025-04-20 22:12:38,946 - services.image_generator - INFO - Downloading image 4/4: **DraftKings Promo on Phone** ...
+2025-04-20 22:12:42,573 - services.image_generator - ERROR - Error generating image for prompt '**DraftKings Promo on Phone** ...': [Errno 22] Invalid argument: 'output\\images\\__draftkings_promo_on_phone____\n_vertical_close_up_45.jpg'
+2025-04-20 22:12:42,577 - orchestration.nodes.media_nodes - INFO - Checking if workflow should pause after media generation
+2025-04-20 22:12:42,579 - orchestration.nodes.video_nodes - INFO - Assembling video from audio and images
+2025-04-20 22:12:42,580 - services.video_editor - INFO - Creating video from 4 images and audio
+2025-04-20 22:12:42,796 - services.video_editor - INFO - Audio duration: 53.33s, Duration per image: 13.33s
+2025-04-20 22:12:47,150 - services.video_editor - ERROR - Error creating video: Could not find a backend to open `assets/placeholder.jpg`` with iomode `ri`.
+Based on the extension, the following plugins might add capable backends:
+  pyav:  pip install imageio[pyav]
+2025-04-20 22:12:47,150 - orchestration.nodes.video_nodes - ERROR - Error in assemble_video: Could not find a backend to open `assets/placeholder.jpg`` with iomode `ri`.
+Based on the extension, the following plugins might add capable backends:
+  pyav:  pip install imageio[pyav]
+2025-04-20 22:12:47,151 - orchestration.nodes.video_nodes - INFO - Checking if workflow should pause after video assembly
+2025-04-20 22:12:47,152 - orchestration.nodes.upload_nodes - INFO - Uploading video to YouTube
+2025-04-20 22:12:47,153 - services.youtube_uploader - INFO - Uploading video: News Update: heat vs cavaliers
+2025-04-20 22:12:47,153 - services.youtube_uploader - ERROR - Video file not found: 
+2025-04-20 22:23:09,769 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 22:23:13,800 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 22:23:13,800 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-20 22:23:22,108 - services.trends_scraper - INFO - Retrieved 585 trending topics
+2025-04-20 22:23:24,227 - services.trends_scraper - INFO - Selected best trending topic: heat vs cavaliers
+2025-04-20 22:23:24,227 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: heat vs cavaliers
+2025-04-20 22:23:24,229 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-20 22:23:32,516 - services.trends_scraper - INFO - Retrieved 585 trending topics
+2025-04-20 22:23:34,672 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: heat vs cavaliers
+2025-04-20 22:23:34,672 - services.news_scraper - INFO - Fetching news for topic: heat vs cavaliers
+2025-04-20 22:23:39,351 - services.news_scraper - INFO - Retrieved 5 news articles for topic: heat vs cavaliers
+2025-04-20 22:23:45,332 - services.news_scraper - INFO - Successfully consolidated news articles
+2025-04-20 22:23:45,335 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 22:23:45,337 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 22:23:45,338 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 22:23:51,871 - services.script_generator - INFO - Generated script (4581 chars) and 8 image prompts
+2025-04-20 22:23:51,876 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-20 22:23:51,877 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-20 22:23:51,877 - services.tts_service - INFO - Generating audio from script (4581 chars)
+2025-04-20 22:23:51,878 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-20 22:34:51,394 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 22:35:08,059 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 22:35:08,063 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-20 22:35:16,501 - services.trends_scraper - INFO - Retrieved 580 trending topics
+2025-04-20 22:35:18,613 - services.trends_scraper - INFO - Selected best trending topic: heat vs cavaliers
+2025-04-20 22:35:18,613 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: heat vs cavaliers
+2025-04-20 22:35:18,615 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-20 22:35:27,026 - services.trends_scraper - INFO - Retrieved 580 trending topics
+2025-04-20 22:35:29,235 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: heat vs cavaliers
+2025-04-20 22:35:29,235 - services.news_scraper - INFO - Fetching news for topic: heat vs cavaliers
+2025-04-20 22:35:33,897 - services.news_scraper - INFO - Retrieved 5 news articles for topic: heat vs cavaliers
+2025-04-20 22:35:39,311 - services.news_scraper - INFO - Successfully consolidated news articles
+2025-04-20 22:35:39,312 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 22:35:39,313 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 22:35:39,313 - services.script_generator - INFO - Generating YouTube Short script and image prompts for slideshow format
+2025-04-20 22:35:56,211 - services.script_generator - INFO - Successfully generated script (432 chars) and 12 image prompts with timing markers
+2025-04-20 22:35:56,212 - orchestration.nodes.script_nodes - ERROR - Error in generate_script_and_prompts: too many values to unpack (expected 2)
+2025-04-20 22:35:56,215 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-20 22:35:56,216 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-20 22:35:56,216 - services.tts_service - INFO - Generating audio from script (0 chars)
+2025-04-20 22:35:56,216 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-20 22:35:56,551 - services.tts_service - INFO - Audio content written to output\audio\audio_1745202956.mp3
+2025-04-20 22:35:56,555 - orchestration.nodes.media_nodes - INFO - Generating images from 0 prompts
+2025-04-20 22:35:56,556 - services.image_generator - INFO - Generating 0 images
+2025-04-20 22:35:56,558 - orchestration.nodes.media_nodes - INFO - Checking if workflow should pause after media generation
+2025-04-20 22:35:56,559 - orchestration.nodes.video_nodes - INFO - Assembling video from audio and images
+2025-04-20 22:35:56,559 - services.video_editor - INFO - Creating video from 0 images and audio
+2025-04-20 22:35:56,649 - services.video_editor - ERROR - Error creating video: MoviePy error: failed to read the duration of file output\audio\audio_1745202956.mp3.
+Here are the file infos returned by ffmpeg:
+
+ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[mp3 @ 000001f7883b5080] Format mp3 detected only with low score of 1, misdetection possible!
+[mp3 @ 000001f7883b5080] Failed to find two consecutive MPEG audio frames.
+[in#0 @ 000001f7883b4c80] Error opening input: Invalid data found when processing input
+Error opening input file output\audio\audio_1745202956.mp3.
+Error opening input files: Invalid data found when processing input
+
+2025-04-20 22:35:56,650 - orchestration.nodes.video_nodes - ERROR - Error in assemble_video: MoviePy error: failed to read the duration of file output\audio\audio_1745202956.mp3.
+Here are the file infos returned by ffmpeg:
+
+ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[mp3 @ 000001f7883b5080] Format mp3 detected only with low score of 1, misdetection possible!
+[mp3 @ 000001f7883b5080] Failed to find two consecutive MPEG audio frames.
+[in#0 @ 000001f7883b4c80] Error opening input: Invalid data found when processing input
+Error opening input file output\audio\audio_1745202956.mp3.
+Error opening input files: Invalid data found when processing input
+
+2025-04-20 22:35:56,652 - orchestration.nodes.video_nodes - INFO - Checking if workflow should pause after video assembly
+2025-04-20 22:35:56,653 - orchestration.nodes.upload_nodes - INFO - Uploading video to YouTube
+2025-04-20 22:35:56,654 - services.youtube_uploader - INFO - Uploading video: News Update: heat vs cavaliers
+2025-04-20 22:35:56,654 - services.youtube_uploader - ERROR - Video file not found: 
+2025-04-20 22:48:30,018 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-20 22:48:33,640 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-20 22:48:33,641 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-20 22:48:41,956 - services.trends_scraper - INFO - Retrieved 577 trending topics
+2025-04-20 22:48:44,103 - services.trends_scraper - INFO - Selected best trending topic: heat vs cavaliers
+2025-04-20 22:48:44,105 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: heat vs cavaliers
+2025-04-20 22:48:44,105 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-20 22:48:52,496 - services.trends_scraper - INFO - Retrieved 577 trending topics
+2025-04-20 22:48:54,662 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: heat vs cavaliers
+2025-04-20 22:48:54,662 - services.news_scraper - INFO - Fetching news for topic: heat vs cavaliers
+2025-04-20 22:48:59,482 - services.news_scraper - INFO - Retrieved 5 news articles for topic: heat vs cavaliers
+2025-04-20 22:49:04,429 - services.news_scraper - INFO - Successfully consolidated news articles
+2025-04-20 22:49:04,432 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-20 22:49:04,434 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-20 22:49:04,434 - services.script_generator - INFO - Generating script and image prompts
+2025-04-20 22:49:09,088 - services.script_generator - INFO - Generated script (2024 chars) and 5 image prompts
+2025-04-20 22:49:09,091 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-20 22:49:09,094 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-20 22:49:09,095 - services.tts_service - INFO - Generating audio from script (2024 chars)
+2025-04-20 22:49:09,095 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-20 22:49:10,767 - services.tts_service - INFO - Audio content written to output\audio\audio_1745203749.mp3
+2025-04-20 22:49:10,770 - orchestration.nodes.media_nodes - INFO - Generating images from 5 prompts
+2025-04-20 22:49:10,770 - services.image_generator - INFO - Generating 5 images
+2025-04-20 22:49:10,770 - services.image_generator - INFO - Downloading image 1/5: An energetic basketball game s...
+2025-04-20 22:49:28,817 - services.image_generator - INFO - Downloaded image to output\images\an_energetic_basketball_game_scene_with_cavaliers_42.jpg
+2025-04-20 22:49:29,818 - services.image_generator - INFO - Downloading image 2/5: A cozy living room with a fami...
+2025-04-20 22:49:37,698 - services.image_generator - INFO - Downloaded image to output\images\a_cozy_living_room_with_a_family_cheering_and_havi_43.jpg
+2025-04-20 22:49:38,700 - services.image_generator - INFO - Downloading image 3/5: A detailed 2025 NBA playoff br...
+2025-04-20 22:49:43,602 - services.image_generator - INFO - Downloaded image to output\images\a_detailed_2025_nba_playoff_bracket_showing_all_fi_44.jpg
+2025-04-20 22:49:44,603 - services.image_generator - INFO - Downloading image 4/5: A close-up of a hand placing a...
+2025-04-20 22:49:52,079 - services.image_generator - INFO - Downloaded image to output\images\a_close_up_of_a_hand_placing_a_bet_on_a_smartphone_45.jpg
+2025-04-20 22:49:53,080 - services.image_generator - INFO - Downloading image 5/5: A dynamic montage of NBA playo...
+2025-04-20 22:49:56,931 - services.image_generator - INFO - Downloaded image to output\images\a_dynamic_montage_of_nba_playoff_highlights__inclu_46.jpg
+2025-04-20 22:49:57,936 - orchestration.nodes.media_nodes - INFO - Checking if workflow should pause after media generation
+2025-04-20 22:49:57,939 - orchestration.nodes.video_nodes - INFO - Assembling video from audio and images
+2025-04-20 22:49:57,939 - services.video_editor - INFO - Creating video from 5 images and audio
+2025-04-20 22:49:58,113 - services.video_editor - INFO - Audio duration: 129.10s, Duration per image: 25.82s
+2025-04-20 22:50:02,439 - services.video_editor - INFO - Adding background music from assets/bg_music.mp3
+2025-04-20 22:50:02,495 - services.video_editor - ERROR - Error creating video: MoviePy error: failed to read the duration of file assets/bg_music.mp3.
+Here are the file infos returned by ffmpeg:
+
+ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[mp3 @ 00000246e4e15000] Format mp3 detected only with low score of 1, misdetection possible!
+[mp3 @ 00000246e4e15000] Failed to find two consecutive MPEG audio frames.
+[in#0 @ 00000246e4e14c00] Error opening input: Invalid data found when processing input
+Error opening input file assets/bg_music.mp3.
+Error opening input files: Invalid data found when processing input
+
+2025-04-20 22:50:02,496 - orchestration.nodes.video_nodes - ERROR - Error in assemble_video: MoviePy error: failed to read the duration of file assets/bg_music.mp3.
+Here are the file infos returned by ffmpeg:
+
+ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[mp3 @ 00000246e4e15000] Format mp3 detected only with low score of 1, misdetection possible!
+[mp3 @ 00000246e4e15000] Failed to find two consecutive MPEG audio frames.
+[in#0 @ 00000246e4e14c00] Error opening input: Invalid data found when processing input
+Error opening input file assets/bg_music.mp3.
+Error opening input files: Invalid data found when processing input
+
+2025-04-20 22:50:02,497 - orchestration.nodes.video_nodes - INFO - Checking if workflow should pause after video assembly
+2025-04-20 22:50:02,498 - orchestration.nodes.upload_nodes - INFO - Uploading video to YouTube
+2025-04-20 22:50:02,498 - services.youtube_uploader - INFO - Uploading video: News Update: heat vs cavaliers
+2025-04-20 22:50:02,498 - services.youtube_uploader - ERROR - Video file not found: 

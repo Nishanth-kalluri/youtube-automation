@@ -1,0 +1,156 @@
+2025-04-22 12:18:59,029 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-22 12:19:04,982 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-22 12:19:04,983 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-22 12:19:16,333 - services.trends_scraper - INFO - Retrieved 393 trending topics
+2025-04-22 12:19:18,455 - services.trends_scraper - INFO - Selected best trending topic: oblivion remaster
+2025-04-22 12:19:18,456 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: oblivion remaster
+2025-04-22 12:19:18,459 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-22 12:19:27,952 - services.trends_scraper - INFO - Retrieved 393 trending topics
+2025-04-22 12:19:30,134 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: oblivion remaster
+2025-04-22 12:19:30,134 - services.news_scraper - INFO - Fetching news for topic: oblivion remaster
+2025-04-22 12:19:36,735 - services.news_scraper - INFO - Retrieved 5 news articles for topic: oblivion remaster
+2025-04-22 12:19:41,617 - services.news_scraper - INFO - Successfully consolidated news articles
+2025-04-22 12:19:41,620 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-22 12:19:41,624 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-22 12:19:41,624 - services.script_generator - INFO - Generating script and image prompts
+2025-04-22 12:19:44,984 - services.script_generator - INFO - Generated script (1208 chars) and 5 image prompts
+2025-04-22 12:19:44,990 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-22 12:19:44,993 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-22 12:19:44,994 - services.tts_service - INFO - Generating audio from script (1208 chars)
+2025-04-22 12:19:44,995 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-22 12:19:46,942 - services.tts_service - INFO - Audio content written to output\audio\audio_1745338784.mp3
+2025-04-22 12:19:46,944 - orchestration.nodes.media_nodes - INFO - Generating images from 5 prompts
+2025-04-22 12:19:46,945 - services.image_generator - INFO - Generating 5 images
+2025-04-22 12:19:46,945 - services.image_generator - INFO - Downloading image 1/5: A vast, remastered landscape o...
+2025-04-22 12:28:11,976 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-22 12:28:16,445 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-22 12:28:16,448 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-22 12:28:25,779 - services.trends_scraper - INFO - Retrieved 395 trending topics
+2025-04-22 12:28:27,987 - services.trends_scraper - INFO - Selected best trending topic: oblivion remaster
+2025-04-22 12:28:27,987 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: oblivion remaster
+2025-04-22 12:28:27,989 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-22 12:28:36,884 - services.trends_scraper - INFO - Retrieved 395 trending topics
+2025-04-22 12:28:39,063 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: oblivion remaster
+2025-04-22 12:28:39,063 - services.news_scraper - INFO - Fetching news for topic: oblivion remaster
+2025-04-22 12:28:44,475 - services.news_scraper - INFO - Retrieved 5 news articles for topic: oblivion remaster
+2025-04-22 12:28:49,372 - services.news_scraper - INFO - Successfully consolidated news articles
+2025-04-22 12:28:49,375 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-22 12:28:49,377 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-22 12:28:49,378 - services.script_generator - INFO - Generating script and image prompts
+2025-04-22 12:28:54,714 - services.script_generator - INFO - Generated script (3060 chars) and 6 image prompts
+2025-04-22 12:28:54,719 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-22 12:28:54,722 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-22 12:28:54,724 - services.tts_service - INFO - Generating audio from script (3060 chars)
+2025-04-22 12:28:54,725 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-22 12:28:58,126 - services.tts_service - INFO - Audio content written to output\audio\audio_1745339334.mp3
+2025-04-22 12:28:58,127 - orchestration.nodes.media_nodes - INFO - Generating images from 6 prompts
+2025-04-22 12:28:58,128 - services.image_generator - INFO - Generating 6 images
+2025-04-22 12:28:58,128 - services.image_generator - INFO - Downloading image 1/6: A sweeping shot of the Oblivio...
+2025-04-22 12:29:04,747 - services.image_generator - INFO - Downloaded image to output\images\a_sweeping_shot_of_the_oblivion_landscape__transit_42.jpg
+2025-04-22 12:29:05,748 - services.image_generator - INFO - Downloading image 2/6: A side-by-side comparison of t...
+2025-04-22 12:29:14,374 - services.image_generator - INFO - Downloaded image to output\images\a_side_by_side_comparison_of_the_original_and_rema_43.jpg
+2025-04-22 12:29:15,376 - services.image_generator - INFO - Downloading image 3/6: Gameplay footage showing the s...
+2025-04-22 12:29:20,258 - services.image_generator - INFO - Downloaded image to output\images\gameplay_footage_showing_the_streamlined_leveling_44.jpg
+2025-04-22 12:29:21,260 - services.image_generator - INFO - Downloading image 4/6: A shot of the game's file size...
+2025-04-22 12:29:27,457 - services.image_generator - INFO - Downloaded image to output\images\a_shot_of_the_game_s_file_size_and_technical_detai_45.jpg
+2025-04-22 12:29:28,459 - services.image_generator - INFO - Downloading image 5/6: Todd Howard speaking about *Th...
+2025-04-22 12:29:31,870 - services.image_generator - INFO - Downloaded image to output\images\todd_howard_speaking_about__the_elder_scrolls_6__w_46.jpg
+2025-04-22 12:29:32,878 - services.image_generator - INFO - Downloading image 6/6: A montage of gameplay from *Ob...
+2025-04-22 12:29:34,582 - services.image_generator - ERROR - Failed to download image. Status code: 502
+2025-04-22 12:29:35,586 - orchestration.nodes.media_nodes - INFO - Checking if workflow should pause after media generation
+2025-04-22 12:29:35,587 - orchestration.nodes.video_nodes - INFO - Assembling video from audio and images
+2025-04-22 12:29:35,587 - services.video_editor - INFO - Creating video from 6 images and audio
+2025-04-22 12:29:35,786 - services.video_editor - INFO - Audio duration: 197.57s, Duration per image: 32.93s
+2025-04-22 12:29:40,142 - services.video_editor - ERROR - Error creating video: Could not find a backend to open `assets/placeholder.jpg`` with iomode `ri`.
+Based on the extension, the following plugins might add capable backends:
+  pyav:  pip install imageio[pyav]
+2025-04-22 12:29:40,142 - orchestration.nodes.video_nodes - ERROR - Error in assemble_video: Could not find a backend to open `assets/placeholder.jpg`` with iomode `ri`.
+Based on the extension, the following plugins might add capable backends:
+  pyav:  pip install imageio[pyav]
+2025-04-22 12:29:40,146 - orchestration.nodes.video_nodes - INFO - Checking if workflow should pause after video assembly
+2025-04-22 12:29:40,147 - orchestration.nodes.upload_nodes - INFO - Uploading video to YouTube
+2025-04-22 12:29:40,147 - services.youtube_uploader - INFO - Uploading video: News Update: oblivion remaster
+2025-04-22 12:29:40,147 - services.youtube_uploader - ERROR - Video file not found: 
+2025-04-22 12:36:04,574 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
+2025-04-22 12:36:09,025 - orchestration.nodes.trend_nodes - INFO - Fetching trending topics for topic: 
+2025-04-22 12:36:09,027 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-22 12:36:18,949 - services.trends_scraper - INFO - Retrieved 395 trending topics
+2025-04-22 12:36:21,118 - services.trends_scraper - INFO - Selected best trending topic: oblivion remaster
+2025-04-22 12:36:21,119 - orchestration.nodes.trend_nodes - INFO - No topic provided by user. Using best trending topic: oblivion remaster
+2025-04-22 12:36:21,121 - services.trends_scraper - INFO - Fetching trending topics from Google Trends
+2025-04-22 12:36:29,850 - services.trends_scraper - INFO - Retrieved 395 trending topics
+2025-04-22 12:36:31,985 - orchestration.nodes.news_nodes - INFO - Starting news fetch for topic: oblivion remaster
+2025-04-22 12:36:31,985 - services.news_scraper - INFO - Fetching news for topic: oblivion remaster
+2025-04-22 12:36:37,356 - services.news_scraper - INFO - Retrieved 5 news articles for topic: oblivion remaster
+2025-04-22 12:36:42,677 - services.news_scraper - INFO - Successfully consolidated news articles
+2025-04-22 12:36:42,680 - orchestration.nodes.news_nodes - INFO - Checking if workflow should pause after news consolidation
+2025-04-22 12:36:42,683 - orchestration.nodes.script_nodes - INFO - Generating script and image prompts
+2025-04-22 12:36:42,684 - services.script_generator - INFO - Generating script and image prompts
+2025-04-22 12:36:48,260 - services.script_generator - INFO - Generated script (1932 chars) and 5 image prompts
+2025-04-22 12:36:48,262 - orchestration.nodes.script_nodes - INFO - Checking if workflow should pause after script generation
+2025-04-22 12:36:48,263 - orchestration.nodes.media_nodes - INFO - Generating audio from script
+2025-04-22 12:36:48,264 - services.tts_service - INFO - Generating audio from script (1932 chars)
+2025-04-22 12:36:48,264 - services.tts_service - INFO - Calling Google TTS API...
+2025-04-22 12:36:51,488 - services.tts_service - INFO - Audio content written to output\audio\audio_1745339808.mp3
+2025-04-22 12:36:51,493 - orchestration.nodes.media_nodes - INFO - Generating images from 5 prompts
+2025-04-22 12:36:51,494 - services.image_generator - INFO - Generating 5 images
+2025-04-22 12:36:51,495 - services.image_generator - INFO - Downloading image 1/5: A dramatic scene of the game's...
+2025-04-22 12:36:54,220 - services.image_generator - INFO - Downloaded image to output\images\a_dramatic_scene_of_the_game_s_world_with_the_titl_42.jpg
+2025-04-22 12:36:55,222 - services.image_generator - INFO - Downloading image 2/5: A split-screen image showing t...
+2025-04-22 12:36:58,231 - services.image_generator - INFO - Downloaded image to output\images\a_split_screen_image_showing_the_game_running_on_p_43.jpg
+2025-04-22 12:36:59,233 - services.image_generator - INFO - Downloading image 3/5: A before-and-after comparison ...
+2025-04-22 12:37:02,222 - services.image_generator - INFO - Downloaded image to output\images\a_before_and_after_comparison_of_a_scene_from_the_44.jpg
+2025-04-22 12:37:03,223 - services.image_generator - INFO - Downloading image 4/5: A character in the game alloca...
+2025-04-22 12:37:12,867 - services.image_generator - INFO - Downloaded image to output\images\a_character_in_the_game_allocating_virtue_points_i_45.jpg
+2025-04-22 12:37:13,868 - services.image_generator - INFO - Downloading image 5/5: A medieval-style scroll with P...
+2025-04-22 12:37:17,957 - services.image_generator - INFO - Downloaded image to output\images\a_medieval_style_scroll_with_pc_system_requirement_46.jpg
+2025-04-22 12:37:18,961 - orchestration.nodes.media_nodes - INFO - Checking if workflow should pause after media generation
+2025-04-22 12:37:18,962 - orchestration.nodes.video_nodes - INFO - Assembling video from audio and images
+2025-04-22 12:37:18,962 - services.video_editor - INFO - Creating video from 5 images and audio
+2025-04-22 12:37:19,168 - services.video_editor - INFO - Audio duration: 129.77s, Duration per image: 25.95s
+2025-04-22 12:37:23,373 - services.video_editor - INFO - Adding background music from assets/bg_music.mp3
+2025-04-22 12:37:23,428 - services.video_editor - ERROR - Error creating video: MoviePy error: failed to read the duration of file assets/bg_music.mp3.
+Here are the file infos returned by ffmpeg:
+
+ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[mp3 @ 000002b8558f5000] Format mp3 detected only with low score of 1, misdetection possible!
+[mp3 @ 000002b8558f5000] Failed to find two consecutive MPEG audio frames.
+[in#0 @ 000002b8558f4c00] Error opening input: Invalid data found when processing input
+Error opening input file assets/bg_music.mp3.
+Error opening input files: Invalid data found when processing input
+
+2025-04-22 12:37:23,428 - orchestration.nodes.video_nodes - ERROR - Error in assemble_video: MoviePy error: failed to read the duration of file assets/bg_music.mp3.
+Here are the file infos returned by ffmpeg:
+
+ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[mp3 @ 000002b8558f5000] Format mp3 detected only with low score of 1, misdetection possible!
+[mp3 @ 000002b8558f5000] Failed to find two consecutive MPEG audio frames.
+[in#0 @ 000002b8558f4c00] Error opening input: Invalid data found when processing input
+Error opening input file assets/bg_music.mp3.
+Error opening input files: Invalid data found when processing input
+
+2025-04-22 12:37:23,430 - orchestration.nodes.video_nodes - INFO - Checking if workflow should pause after video assembly
+2025-04-22 12:37:23,430 - orchestration.nodes.upload_nodes - INFO - Uploading video to YouTube
+2025-04-22 12:37:23,432 - services.youtube_uploader - INFO - Uploading video: News Update: oblivion remaster
+2025-04-22 12:37:23,432 - services.youtube_uploader - ERROR - Video file not found: 
+2025-04-22 14:40:39,648 - services.tts_service - INFO - Successfully initialized Text-to-Speech client
