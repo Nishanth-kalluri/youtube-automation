@@ -15,9 +15,10 @@ def generate_audio(state):
         # Update status
         state_dict = state.dict()
         state_dict["status_message"] = "Generating audio from script"
-        
+        print("EMOTION:")
+        print(state.emotion)
         # Generate audio
-        audio_path = tts_service.generate_audio(state.narration)
+        audio_path = tts_service.generate_audio(state.narration,state.emotion)
         print("generated audio :{}",audio_path)
         # Update state
         state_dict["audio_path"] = audio_path

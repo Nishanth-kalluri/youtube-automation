@@ -15,7 +15,7 @@ def generate_script_and_prompts(state):
         state_dict["status_message"] = "Generating script and image prompts"
         
         # Generate script and prompts
-        script, image_prompts = script_generator.generate_script_and_prompts(state.consolidated_news)
+        script, image_prompts, emotion = script_generator.generate_script_and_prompts(state.consolidated_news)
         print("SCRIPT:")
         print(script)
         print("IMAGE PROMPTS:")
@@ -33,10 +33,13 @@ def generate_script_and_prompts(state):
         narration_text = narration_text.strip()
         print("NARRATION TEXT:")
         print(narration_text)
+        print("EMOTION:")
+        print(emotion)
         # Update state
         state_dict["script"] = script
         state_dict["image_prompts"] = image_prompts
-        state_dict["narration"] = narration_text  # Store as a single string
+        state_dict["narration"] = narration_text# Store as a single string
+        state_dict["emotion"]=emotion
         state_dict["status_message"] = "Script and image prompts generated successfully"
         
         return state_dict

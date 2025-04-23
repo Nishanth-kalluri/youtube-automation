@@ -1,4 +1,3 @@
-# services/tts_service.py
 import os
 from google.cloud import texttospeech
 from google.oauth2 import service_account
@@ -26,14 +25,14 @@ class TTSService:
             self.logger.error(f"Error initializing Text-to-Speech client: {e}")
             raise
     
-    def generate_audio(self, script, output_filename=None):
-        print("SCRIPT IN GENERATE AUDIO:")
-        print(script)
+    def generate_audio(self, script, emotion=None, voice_name="en-US-Wavenet-D", output_filename=None):
         """
-        Generate audio from script text using Google TTS
+        Generate audio from script text using Google TTS with emotional expression
         
         Args:
             script (str): The script text to convert to speech
+            emotion (str, optional): Emotion to apply (e.g., 'happy', 'sad', 'excited')
+            voice_name (str, optional): The voice to use for synthesis
             output_filename (str, optional): Output file path. If None, a default path is generated.
             
         Returns:
@@ -45,16 +44,24 @@ class TTSService:
             timestamp = int(time.time())
             output_filename = os.path.join(settings.AUDIO_DIR, f"audio_{timestamp}.mp3")
         
-        self.logger.info(f"Generating audio from script ({len(script)} chars)")
+        self.logger.info(f"Generating audio from script ({len(script)} chars), emotion: {emotion}")
         
         try:
-            # Set the text input to be synthesized
-            synthesis_input = texttospeech.SynthesisInput(text=script)
+            # Create synthesis input based on whether SSML is already included
+            if script.strip().startswith('<speak>'):
+                synthesis_input = texttospeech.SynthesisInput(ssml=script)
+            else:
+                # Apply emotion formatting if specified
+                if emotion:
+                    ssml_script = self._apply_emotion_to_ssml(script, emotion)
+                    synthesis_input = texttospeech.SynthesisInput(ssml=ssml_script)
+                else:
+                    synthesis_input = texttospeech.SynthesisInput(text=script)
             
             # Build the voice request
             voice = texttospeech.VoiceSelectionParams(
                 language_code="en-US", 
-                ssml_gender=texttospeech.SsmlVoiceGender.NEUTRAL
+                name=voice_name
             )
             
             # Select the type of audio file
@@ -81,3 +88,141 @@ class TTSService:
         except Exception as e:
             self.logger.error(f"Error generating audio: {e}")
             raise
+
+    def _apply_emotion_to_ssml(self, text, emotion):
+        """
+        Apply emotional styling to text using SSML
+        
+        Args:
+            text (str): Plain text to convert
+            emotion (str): Emotion to apply
+            
+        Returns:
+            str: SSML formatted text with emotion applied
+        """
+        # Define emotion settings based on prosody attributes
+        emotion_settings = {
+            'happy': {
+                'rate': '1.1', 
+                'pitch': '+1.5st', 
+                'volume': 'loud'
+            },
+            'sad': {
+                'rate': '0.9',
+                'pitch': '-2st',
+                'volume': 'soft'
+            },
+            'excited': {
+                'rate': '1.3',
+                'pitch': '+3st',
+                'volume': 'x-loud'
+            },
+            'calm': {
+                'rate': '0.8',
+                'pitch': '-0.5st',
+                'volume': 'medium'
+            },
+            'angry': {
+                'rate': '1.2',
+                'pitch': '-1st',
+                'volume': 'loud'
+            },
+            'whisper': {
+                'rate': '0.95',
+                'pitch': '-1st',
+                'volume': 'x-soft'
+            },
+            'nervous': {
+                'rate': '1.1',
+                'pitch': '+0.8st',
+                'volume': 'medium'
+            }
+        }
+        
+        # Get settings for the requested emotion or use default
+        settings = emotion_settings.get(emotion.lower(), {})
+        
+        # Create SSML with prosody tag
+        if settings:
+            rate = settings.get('rate', '1.0')
+            pitch = settings.get('pitch', '+0st')
+            volume = settings.get('volume', 'medium')
+            
+            ssml = f"""<speak>
+                <prosody rate="{rate}" pitch="{pitch}" volume="{volume}">
+                    {text}
+                </prosody>
+            </speak>"""
+        else:
+            # If emotion not recognized, just wrap in speak tags
+            ssml = f"<speak>{text}</speak>"
+            
+        return ssml
+    
+    def create_expressive_ssml(self, script, expressions=None):
+        """
+        Create SSML with advanced expression controls
+        
+        Args:
+            script (str): The base script text
+            expressions (list): List of dicts with start/end indexes and expression types
+            
+        Returns:
+            str: Fully formatted SSML string
+        """
+        if not expressions:
+            return f"<speak>{script}</speak>"
+            
+        # Start with opening speak tag
+        ssml = "<speak>"
+        last_end = 0
+        
+        # Apply expressions where specified
+        for expr in sorted(expressions, key=lambda x: x['start']):
+            start = expr['start']
+            end = expr['end']
+            expr_type = expr['type']
+            
+            # Add text before this expression
+            ssml += script[last_end:start]
+            
+            # Apply the expression
+            text_segment = script[start:end]
+            if expr_type == 'emphasis':
+                level = expr.get('level', 'moderate')
+                ssml += f'<emphasis level="{level}">{text_segment}</emphasis>'
+            elif expr_type == 'break':
+                duration = expr.get('duration', 500)
+                ssml += f'{text_segment}<break time="{duration}ms"/>'
+            elif expr_type == 'emotion':
+                emotion = expr.get('emotion', 'neutral')
+                emotion_settings = self._get_emotion_settings(emotion)
+                ssml += f'<prosody rate="{emotion_settings["rate"]}" pitch="{emotion_settings["pitch"]}" volume="{emotion_settings["volume"]}">{text_segment}</prosody>'
+            elif expr_type == 'character':
+                char_type = expr.get('character_type', 'robot')
+                ssml += f'<say-as interpret-as="character" character-type="{char_type}">{text_segment}</say-as>'
+            else:
+                # If no recognized expression, just add the text
+                ssml += text_segment
+                
+            last_end = end
+            
+        # Add any remaining text
+        ssml += script[last_end:]
+        
+        # Close the speak tag
+        ssml += "</speak>"
+        return ssml
+    
+    def _get_emotion_settings(self, emotion):
+        """Get prosody settings for a specific emotion"""
+        emotion_settings = {
+            'happy': {'rate': '1.1', 'pitch': '+1.5st', 'volume': 'loud'},
+            'sad': {'rate': '0.9', 'pitch': '-2st', 'volume': 'soft'},
+            'excited': {'rate': '1.3', 'pitch': '+3st', 'volume': 'x-loud'},
+            'calm': {'rate': '0.8', 'pitch': '-0.5st', 'volume': 'medium'},
+            'angry': {'rate': '1.2', 'pitch': '-1st', 'volume': 'loud'},
+            'whisper': {'rate': '0.95', 'pitch': '-1st', 'volume': 'x-soft'},
+            'nervous': {'rate': '1.1', 'pitch': '+0.8st', 'volume': 'medium'}
+        }
+        return emotion_settings.get(emotion.lower(), {'rate': '1.0', 'pitch': '+0st', 'volume': 'medium'})

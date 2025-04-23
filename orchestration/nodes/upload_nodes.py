@@ -17,11 +17,7 @@ def upload_video(state):
         
         # Generate title and description from script and consolidated news
         title = f"News Update: {state.topic}"
-        description = (
-            f"Auto-generated news video about {state.topic}.\n\n"
-            f"Summary:\n{state.consolidated_news[:500]}...\n\n"
-            "This video was automatically generated."
-        )
+        description = ""
         
         # Upload video
         upload_status = youtube_uploader.upload_video(state.video_path, title, description)
