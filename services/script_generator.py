@@ -10,7 +10,7 @@ class ScriptGenerator:
     
     def generate_script_and_prompts(self, consolidated_news):
         """Generate a video script and image prompts from consolidated news"""
-        self.logger.info("Generating script, image prompts, and emotion tone")
+        self.logger.info("Generating script, image prompts, emotion tone, title and description")
         
         # Prepare the prompt for Groq
         prompt = f"""
@@ -33,12 +33,20 @@ class ScriptGenerator:
         
         3. The overall emotional tone for the narration. Choose ONE emotional tone from this list: happy, sad, excited, calm, angry, whisper, nervous.
 
+        4. A catchy, attention-grabbing YouTube Shorts title (50-60 characters max) that will drive clicks and views.
+
+        5. A concise YouTube Shorts description (2-3 sentences max) that summarizes the content and includes 5-7 relevant hashtags at the end.
+
         IMPORTANT FORMATTING INSTRUCTIONS:
         - Begin with the emotion marker "<<EMOTION_START>>" followed by your chosen emotion and "<<EMOTION_END>>" on the same line
         - Begin the script section with the exact marker "<<VIDEO_SCRIPT_START>>" on its own line
         - End the script section with the exact marker "<<VIDEO_SCRIPT_END>>" on its own line
         - Begin the image prompts section with the exact marker "<<IMAGE_PROMPTS_START>>" on its own line
         - End the image prompts section with the exact marker "<<IMAGE_PROMPTS_END>>" on its own line
+        - Begin the title section with the exact marker "<<TITLE_START>>" on its own line
+        - End the title section with the exact marker "<<TITLE_END>>" on its own line
+        - Begin the description section with the exact marker "<<DESCRIPTION_START>>" on its own line
+        - End the description section with the exact marker "<<DESCRIPTION_END>>" on its own line
         - For image prompts, place each prompt on a new line with no numbering or bullets
         - Do not include any other text, explanations, or formatting outside these markers
         - ENSURE ALL narration lines are formatted as: Narrator: "narration text here"
@@ -62,6 +70,14 @@ class ScriptGenerator:
         [Second image prompt]
         [Third image prompt]
         <<IMAGE_PROMPTS_END>>
+
+        <<TITLE_START>>
+        Breaking News: The Most Shocking Updates You Need to Know!
+        <<TITLE_END>>
+
+        <<DESCRIPTION_START>>
+        Get the latest updates on this breaking story. Don't miss these crucial details everyone's talking about! #BreakingNews #Update #MustWatch #Viral #TrendingNow
+        <<DESCRIPTION_END>>
         """
         
         try:
@@ -79,10 +95,12 @@ class ScriptGenerator:
             print("THE OVERALL ACTUAL RESPONSE")
             print(content)
             
-            # Parse emotion, script and image prompts
+            # Parse emotion, script, image prompts, title and description
             script_section = ""
             image_prompts = []
             emotion = "neutral"  # Default emotion if none found
+            title = ""
+            description = ""
             
             # Extract emotion using markers
             if "<<EMOTION_START>>" in content and "<<EMOTION_END>>" in content:
@@ -129,6 +147,34 @@ class ScriptGenerator:
                             
                             if prompt:
                                 image_prompts.append(prompt)
+                                
+            # Extract title
+            if "<<TITLE_START>>" in content and "<<TITLE_END>>" in content:
+                title = content.split("<<TITLE_START>>")[1].split("<<TITLE_END>>")[0].strip()
+            else:
+                self.logger.warning("Title markers not found in response - attempting to extract title from content")
+                title_prefixes = ["Title:", "VIDEO TITLE:", "YouTube Title:"]
+                for line in content.split('\n'):
+                    for prefix in title_prefixes:
+                        if prefix in line:
+                            title = line.split(prefix, 1)[1].strip()
+                            # Remove quotes if present
+                            title = title.strip('"\'')
+                            break
+                            
+            # Extract description
+            if "<<DESCRIPTION_START>>" in content and "<<DESCRIPTION_END>>" in content:
+                description = content.split("<<DESCRIPTION_START>>")[1].split("<<DESCRIPTION_END>>")[0].strip()
+            else:
+                self.logger.warning("Description markers not found in response - attempting to extract description from content")
+                desc_prefixes = ["Description:", "VIDEO DESCRIPTION:", "YouTube Description:"]
+                for line in content.split('\n'):
+                    for prefix in desc_prefixes:
+                        if prefix in line:
+                            description = line.split(prefix, 1)[1].strip()
+                            # Remove quotes if present
+                            description = description.strip('"\'')
+                            break
             
             # Check if the script has proper narrator formatting
             # Look for lines with "Narrator:" format
@@ -195,9 +241,11 @@ class ScriptGenerator:
             
             self.logger.info(f"Generated script ({len(script_section)} chars), {len(image_prompts)} image prompts, and emotion: {emotion}")
             self.logger.info(f"Successfully extracted {len(test_narration.split())} words of narration text")
+            self.logger.info(f"Generated title: {title}")
+            self.logger.info(f"Generated description with hashtags: {description}")
             
-            return script_section, image_prompts, emotion
+            return script_section, image_prompts, emotion, title, description
             
         except Exception as e:
             self.logger.error(f"Error generating script: {e}")
-            return "Error generating script.", ["Generic news image"], "neutral"
+            return "Error generating script.", ["Generic news image"], "neutral", "Error generating title", "Error generating description"

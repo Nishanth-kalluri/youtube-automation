@@ -14,6 +14,8 @@ class WorkflowState(BaseModel):
     # Generated content
     script: str = ""
     narration: str=""
+    title: str=""
+    description: str=""
     emotion: str="excited"
     image_prompts: List[str] = []
     audio_path: str = ""

@@ -15,7 +15,7 @@ def generate_script_and_prompts(state):
         state_dict["status_message"] = "Generating script and image prompts"
         
         # Generate script and prompts
-        script, image_prompts, emotion = script_generator.generate_script_and_prompts(state.consolidated_news)
+        script, image_prompts, emotion, title, description = script_generator.generate_script_and_prompts(state.consolidated_news)
         print("SCRIPT:")
         print(script)
         print("IMAGE PROMPTS:")
@@ -41,7 +41,8 @@ def generate_script_and_prompts(state):
         state_dict["narration"] = narration_text# Store as a single string
         state_dict["emotion"]=emotion
         state_dict["status_message"] = "Script and image prompts generated successfully"
-        
+        state_dict["title"]=title
+        state_dict["description"]=description
         return state_dict
         
     except Exception as e:
