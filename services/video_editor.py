@@ -58,7 +58,7 @@ class VideoEditor:
             # Add audio (narration and background music)
             if os.path.exists(bg_music_path):
                 self.logger.info(f"Adding background music from {bg_music_path}")
-                bg_music = AudioFileClip(bg_music_path).volumex(0.2)  # Set volume to 20%
+                bg_music = AudioFileClip(bg_music_path).volumex(0.05)  # Set volume to 20%
                 
                 # Loop the background music if needed
                 if bg_music.duration < audio_duration:
