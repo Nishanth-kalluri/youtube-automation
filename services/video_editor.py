@@ -12,7 +12,7 @@ class VideoEditor:
     def __init__(self):
         self.logger = Logger(__name__)
     
-    def create_video(self, audio_path, image_paths, bg_music_path=None):
+    def create_video(self, audio_path, image_paths, bg_music_path):
         """
         Create a video from audio and images
         

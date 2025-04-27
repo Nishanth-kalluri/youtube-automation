@@ -13,9 +13,10 @@ def assemble_video(state):
         # Update status
         state_dict = state.dict()
         state_dict["status_message"] = "Assembling video"
-        
+        emotion = state.emotion
+        audio_path = f"assets/{emotion}_bg_music.mp3"
         # Assemble video
-        video_path = video_editor.create_video(state.audio_path, state.image_paths)
+        video_path = video_editor.create_video(state.audio_path, state.image_paths,audio_path)
         
         # Update state
         state_dict["video_path"] = video_path

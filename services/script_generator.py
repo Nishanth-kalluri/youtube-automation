@@ -36,6 +36,8 @@ class ScriptGenerator:
         4. A catchy, attention-grabbing YouTube Shorts title (50-60 characters max) that will drive clicks and views.
 
         5. A concise YouTube Shorts description (2-3 sentences max) that summarizes the content and includes 5-7 relevant hashtags at the end.
+        
+        6. Avoid using any sensitive, offensive, or inappropriate language
 
         IMPORTANT FORMATTING INSTRUCTIONS:
         - Begin with the emotion marker "<<EMOTION_START>>" followed by your chosen emotion and "<<EMOTION_END>>" on the same line
