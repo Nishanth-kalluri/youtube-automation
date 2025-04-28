@@ -34,7 +34,7 @@ def create_workflow_graph():
     graph.add_node("upload_video", upload_nodes.upload_video)
     
     # Final node
-    graph.add_node("finish_workflow", lambda state: {**state.dict(), "status_message": "Workflow completed"})
+    graph.add_node("finish_workflow", lambda state: {})
     
     # Define conditional edges
     

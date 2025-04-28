@@ -130,16 +130,21 @@ def main():
             for step_output in workflow.stream(initial_state):
                 # Update session state with current workflow state
                 st.session_state.workflow_state = step_output
-                
                 # Update progress bar
                 step_count += 1
                 progress_percentage = min(step_count / steps_total, 1.0)
                 progress_bar.progress(progress_percentage)
-                
-                # Update status message
-                if "status_message" in step_output:
-                    status_container.info(step_output["status_message"])
-                
+
+                if st.session_state.workflow_state:
+                    keys = list(st.session_state.workflow_state.keys())
+                    if keys:
+                        first_key = keys[0]
+                        if isinstance(st.session_state.workflow_state[first_key], dict) and 'status_message' in st.session_state.workflow_state[first_key]:
+                            status_container.info(st.session_state.workflow_state[first_key]['status_message'])
+                        else:
+                            status_container.info(f"Processing: {first_key}")
+                    else:
+                        status_container.info("Processing workflow...")
                 # Check if we should pause at this point
                 current_node = step_output.get("__metadata__", {}).get("current_node", "")
                 
@@ -175,10 +180,6 @@ def main():
     state = st.session_state.workflow_state
     
     if state:
-        # Show error if any
-        if state.has_error:
-            st.error(f"Error: {state.error}")
-        
         # Display pause screens based on pause reason
         if st.session_state.is_paused:
             st.subheader(f"Paused at: {st.session_state.pause_reason.replace('_', ' ').title()}")
@@ -206,16 +207,8 @@ def main():
                 st.session_state.is_running = True
                 st.rerun()
         
-        # Final results
-        if not st.session_state.is_running and not st.session_state.is_paused:
-            st.subheader("Final Results")
+       
             
-            if state.upload_status and "video_url" in state.upload_status:
-                st.success(f"Video uploaded successfully!")
-                st.markdown(f"[Watch on YouTube]({state.upload_status['video_url']})")
-            elif state.video_path:
-                st.success("Video generated successfully!")
-                st.video(state.video_path)
 
 if __name__ == "__main__":
     main()

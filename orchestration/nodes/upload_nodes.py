@@ -24,6 +24,7 @@ def upload_video(state):
         
         # Update state
         state_dict["upload_status"] = upload_status
+        state_dict["status_message"]=f"Video uploaded successfully: {upload_status['video_url']}"
         
         if "error" in upload_status:
             state_dict["status_message"] = f"Video upload failed: {upload_status['error']}"

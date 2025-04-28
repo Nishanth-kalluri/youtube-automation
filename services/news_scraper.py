@@ -157,9 +157,10 @@ class NewsScraper:
             
             # Extract the consolidated news
             consolidated_news = response.choices[0].message.content
-            
+            import re
+            cleaned_news = re.sub(r'<think>.*?</think>', '', consolidated_news, flags=re.DOTALL)
             self.logger.info("Successfully consolidated news articles")
-            return consolidated_news
+            return cleaned_news
             
         except Exception as e:
             self.logger.error(f"Error consolidating news: {e}")
