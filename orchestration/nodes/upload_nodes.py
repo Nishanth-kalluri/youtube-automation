@@ -16,14 +16,15 @@ def upload_video(state):
         state_dict["status_message"] = "Uploading video to YouTube"
         
         # Generate title and description from script and consolidated news
-        title = f"News Update: {state.topic}"
-        description = ""
+        title = state.title
+        description = state.description
         
         # Upload video
         upload_status = youtube_uploader.upload_video(state.video_path, title, description)
         
         # Update state
         state_dict["upload_status"] = upload_status
+        state_dict["status_message"]=f"Video uploaded successfully: {upload_status['video_url']}"
         
         if "error" in upload_status:
             state_dict["status_message"] = f"Video upload failed: {upload_status['error']}"

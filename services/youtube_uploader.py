@@ -98,9 +98,9 @@ class YouTubeUploader:
             
             response = upload_request.execute()
             video_id = response['id']
-            video_url = f"https://www.youtube.com/watch?v={video_id}"
+            video_url = f"https://www.youtube.com/shorts/{video_id}"
             
-            self.logger.info(f"Upload successful! Video ID: {video_id}")
+            self.logger.info(f"Upload successful! Video ID: {video_id}, video URL:{video_url}")
             return {
                 "success": True,
                 "video_id": video_id,
