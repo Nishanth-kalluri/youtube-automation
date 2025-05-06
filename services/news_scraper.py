@@ -21,7 +21,7 @@ class NewsScraper:
             self.logger.warning("tiktoken not available, falling back to approximate token counting")
             self.tokenizer = None
         self.max_input_tokens = 6000
-        self.token_buffer = 1000  # Reserve 2000 tokens for prompt and overhead
+        self.token_buffer = 1500  # Reserve 2000 tokens for prompt and overhead
         
     def fetch_news(self, topic, days_back=1, language="eng"):
         """Fetch news articles about a topic from EventRegistry API using keyword search"""

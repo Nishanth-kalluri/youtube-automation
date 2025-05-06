@@ -10,7 +10,7 @@ class ImageGenerator:
         self.logger = Logger(__name__)
         self.width = 1024
         self.height = 1024
-        self.model = 'flux'  # Default model
+        self.model = 'stable-diffusion'  # Default model
         self.max_retries = 5  # Maximum number of retry attempts
         self.retry_delay = 2  # Seconds to wait between retries
     
@@ -38,7 +38,7 @@ class ImageGenerator:
         output_path = os.path.join(settings.IMAGES_DIR, safe_filename)
         
         # Generate the image URL
-        image_url = f"https://pollinations.ai/p/{prompt}?width={self.width}&height={self.height}&seed={seed}&model={self.model}"
+        image_url = f"https://image.pollinations.ai/prompt/{prompt}?width={self.width}&height={self.height}&seed={seed}&nologo=true&nofeed=true&model={self.model}"
         
         self.logger.info(f"Downloading image (attempt {attempt}/{self.max_retries}): {prompt[:30]}...")
         
